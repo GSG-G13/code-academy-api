@@ -13,7 +13,7 @@ CREATE TABLE users (
   avatar TEXT,
   is_active Boolean,
   career_status_id int NOT NULL,
-  FOREIGN KEY (status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (career_status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE user_roles (

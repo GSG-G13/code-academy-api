@@ -1,8 +1,8 @@
 
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
-  ('Cohort 1', 'thumbnail1.jpg', '2023-01-01', '2023-06-30'),
-  ('Cohort 2', 'thumbnail2.jpg', '2023-02-01', '2023-07-31');
+  ('Cohort 1', '', '2023-01-01', '2023-06-30'),
+  ('Cohort 2', '', '2023-02-01', '2023-07-31');
 
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
