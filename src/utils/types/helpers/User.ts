@@ -1,5 +1,5 @@
 interface User {
-  full_name: string;
+  fullName: string;
   username: string;
   email: string;
   password: string;

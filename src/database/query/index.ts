@@ -1,1 +1,3 @@
-export * from './auth';
+import getUserByEmailQuery from './auth';
+
+export default getUserByEmailQuery;
