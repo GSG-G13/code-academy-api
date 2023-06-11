@@ -11,7 +11,7 @@ const createUserQuery = ({
 }: userType ) => {
   const sql = {
     text:
-      'INSERT INTO USER ( full_name, username, email,password) VALUES ($1, $2, $3, $4) RETURNING  id;',
+      'INSERT INTO USER ( full_name, username, email,password) VALUES ($1, $2, $3, $4) RETURNING  id',
     values: [ full_name, username, email, password],
   };
 
