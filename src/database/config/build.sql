@@ -2,7 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS users, user_roles, roles, cohorts, posts, likes, career_status, notes, comments, saved_posts CASCADE;
 
--- SET TIME ZONE 'UTC';
+SET TIME ZONE 'UTC';
 
 CREATE TABLE career_status (
   id SERIAL PRIMARY KEY,
