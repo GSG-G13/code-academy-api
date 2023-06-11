@@ -1,6 +1,6 @@
 interface Args{
-  user_id: number;
-  role_id: number;
-  cohort_id: number;
+  userId: number;
+  roleId: number;
+  cohortId: number;
 }
 export default Args;

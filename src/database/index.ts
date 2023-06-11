@@ -1,1 +1,3 @@
-export * from './query';
+import getUserByEmailQuery from './query';
+
+export default getUserByEmailQuery;
