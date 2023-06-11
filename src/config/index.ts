@@ -1,7 +1,8 @@
-import dotenv from "dotenv";
+
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const { PORT, DEV_DB_URL, NODE_ENV ,email, password } = process.env;
+const { PORT, DEV_DB_URL, NODE_ENV, SECRET_KEY } = process.env;
 
-export { PORT, DEV_DB_URL, NODE_ENV  ,email, password};
+export { PORT, DEV_DB_URL, NODE_ENV, SECRET_KEY };

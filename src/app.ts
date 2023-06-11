@@ -1,8 +1,8 @@
-import express, {Request, Response} from 'express';
-import { PORT } from './config';
+import express, { Request, Response } from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
+import { PORT } from './config';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -14,7 +14,7 @@ app.use([
   express.urlencoded({ extended: false }),
   cookieParser(),
   compression(),
-  cors()
+  cors(),
 ]);
 
 app.get('/', (req: Request, res: Response) => {
@@ -22,7 +22,7 @@ app.get('/', (req: Request, res: Response) => {
     error: false,
     data: {
       message: 'Happy Hacking! 🚀',
-    }
+    },
   });
 });
 
