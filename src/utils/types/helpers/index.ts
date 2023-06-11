@@ -1,3 +1,5 @@
 import JwtPayload from './JwtPayload';
+import User from './User';
+import RoleType from './RoleType';
 
-export default JwtPayload;
+export { User, RoleType, JwtPayload };

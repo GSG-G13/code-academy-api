@@ -1,7 +1,7 @@
 import connection from '../../config/connection';
 
 interface Args {
-  email: string
+  email: string;
 }
 
 const getUserByEmailQuery = ({ email }: Args) => {

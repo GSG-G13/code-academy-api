@@ -1,3 +1,3 @@
-import JwtPayload from './helpers';
+import { User, RoleType, JwtPayload } from './helpers';
 
-export default JwtPayload;
+export { User, RoleType, JwtPayload };
