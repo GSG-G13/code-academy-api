@@ -4,20 +4,19 @@ interface User {
   full_name: string;
   username: string;
   email: string;
-  hashPassword: string;
+  password: string;
 }
 
 const createUserQuery = ({
-  
   full_name,
   username,
   email,
-  hashPassword,
+  password,
 }: User) => {
   const sql = {
     text:
-      'INSERT INTO USER ( full_name, username, email,  hashPassword) VALUES ($1, $2, $3, $4) RETURNING  id;',
-    values: [ full_name, username, email, hashPassword],
+      'INSERT INTO USER ( full_name, username, email,password) VALUES ($1, $2, $3, $4) RETURNING  id;',
+    values: [ full_name, username, email, password],
   };
 
   return Connection.query(sql);
