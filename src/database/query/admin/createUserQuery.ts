@@ -1,24 +1,23 @@
 import  Connection  from '../../config/connection';
 
 interface User {
-  id: number;
   full_name: string;
   username: string;
   email: string;
-  password: string;
+  hashPassword: string;
 }
 
 const createUserQuery = ({
-  id,
+  
   full_name,
   username,
   email,
-  password,
+  hashPassword,
 }: User) => {
   const sql = {
     text:
-      'INSERT INTO USER (id, full_name, username, email, password) VALUES ($1, $2, $3, $4, $5) RETURNING id, full_name, username, email, password;',
-    values: [id, full_name, username, email, password],
+      'INSERT INTO USER ( full_name, username, email,  hashPassword) VALUES ($1, $2, $3, $4) RETURNING  id;',
+    values: [ full_name, username, email, hashPassword],
   };
 
   return Connection.query(sql);
