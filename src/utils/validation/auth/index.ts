@@ -1,1 +1,3 @@
-export * from './loginSchema';
+import loginSchema from './loginSchema';
+
+export default loginSchema;
