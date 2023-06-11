@@ -104,7 +104,7 @@ I can add an article as a new topic in the curriculum, and the Admin approves it
 - [CA-Team](https://hackmd.io/tvGi0n1xQqCEQmEXCgs5Sw)
 - [Student ](https://hackmd.io/GOEb0IUuRAaL7rZRFNeK8Q)
 ## Members:
--[Shatha Amin](https://github.com/Shatha-Amin)
--[Khaled Al-Nabaheen](https://github.com/KhaledAref13)
--[Batrawi](https://github.com/Batrawi)
--[Nour ALagha](https://github.com/Nour-Agha99)
+- [Shatha Amin](https://github.com/Shatha-Amin)
+- [Khaled Al-Nabaheen](https://github.com/KhaledAref13)
+- [Batrawi](https://github.com/Batrawi)
+- [Nour ALagha](https://github.com/Nour-Agha99)
