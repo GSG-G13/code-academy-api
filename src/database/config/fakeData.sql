@@ -1,3 +1,4 @@
+BEGIN;
 
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
@@ -33,3 +34,5 @@ INSERT INTO saved_posts (user_id, post_id)
 VALUES
   (1, 1),
   (2, 2);
+  
+COMMIT;
