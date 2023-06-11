@@ -2,7 +2,13 @@ BEGIN;
 
 DROP TABLE IF EXISTS users, user_roles, roles, cohorts, posts, likes, career_status, notes, comments, saved_posts CASCADE;
 
-SET TIME ZONE 'UTC';
+-- SET TIME ZONE 'UTC';
+
+CREATE TABLE career_status (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+INSERT INTO career_status (name) values ('Student'), ('open to work'), ('Hired');
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -12,8 +18,23 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   avatar TEXT,
   is_active Boolean,
-  career_status_id int NOT NULL,
+  career_status_id int NOT NULL DEFAULT 0,
   FOREIGN KEY (career_status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE roles (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+INSERT INTO roles (name) values ('Admin'), ('Ca-team'), ('V-Mentor'), ('Member');
+
+CREATE TABLE cohorts (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL UNIQUE,
+  thumbnail VARCHAR(255),
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  start_date Date,
+  end_date Date
 );
 
 CREATE TABLE user_roles (
@@ -24,27 +45,6 @@ CREATE TABLE user_roles (
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (cohort_id) REFERENCES cohorts(id) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-CREATE TABLE roles (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL
-);
-INSERT INTO roles (name) values ('Admin'), ('Ca-team'), ('V-Mentor'), ('Member');
-
-CREATE TABLE career_status (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL
-);
-INSERT INTO career_status (name) values ('Student'), ('open to work'), ('Hired');
-
-CREATE TABLE cohorts (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL UNIQUE,
-  thumbnail VARCHAR(255),
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  start_date Date,
-  end_date Date
 );
 
 CREATE TABLE posts (
