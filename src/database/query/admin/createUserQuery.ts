@@ -1,18 +1,14 @@
 import  Connection  from '../../config/connection';
+import { userType } from '../../../utils/types/helpers'
 
-interface User {
-  full_name: string;
-  username: string;
-  email: string;
-  password: string;
-}
+
 
 const createUserQuery = ({
   full_name,
   username,
   email,
   password,
-}: User) => {
+}: userType ) => {
   const sql = {
     text:
       'INSERT INTO USER ( full_name, username, email,password) VALUES ($1, $2, $3, $4) RETURNING  id;',
