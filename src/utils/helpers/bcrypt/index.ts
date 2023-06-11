@@ -1,5 +1,5 @@
-import hashPassword from "./hashPassword";
+import hashPassword from './hashPassword';
 
-import comparePassword from "./comparePassword";
+import comparePassword from './comparePassword';
 
-export {hashPassword,comparePassword};
+export { hashPassword, comparePassword };

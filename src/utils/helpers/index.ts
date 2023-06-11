@@ -1,3 +1,3 @@
-import {hashPassword,comparePassword} from './bcrypt';
+import { hashPassword, comparePassword } from './bcrypt';
 
-export {hashPassword,comparePassword};
+export { hashPassword, comparePassword };
