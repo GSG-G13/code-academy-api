@@ -2,10 +2,12 @@ import Joi from 'joi';
 const addUserSchema = Joi.object({
   full_name: Joi.string()
   .min(3)
-  .max(30)
+  .max(50)
   .required()
   .messages({
     'string.empty': 'Full name cannot be empty',
+    'string.min': 'Full name should have a minimum length of 3',
+    'string.max': 'Full name should have a maximum length of 50',
     'any.required': 'Full name is required',
   }),
   email: Joi.string()
