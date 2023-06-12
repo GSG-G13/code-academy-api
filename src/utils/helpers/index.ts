@@ -1,3 +1,4 @@
+import { generateUsername, generatePassword } from './generate';
 import { hashPassword, comparePassword } from './bcrypt';
 
-export { hashPassword, comparePassword };
+export { generateUsername, generatePassword, hashPassword, comparePassword };

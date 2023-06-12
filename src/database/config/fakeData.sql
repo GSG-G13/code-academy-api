@@ -1,5 +1,10 @@
 BEGIN;
 
+INSERT INTO users (name, thumbnail, start_date, end_date)
+VALUES
+  ('Cohort 1', '', '2023-01-01', '2023-06-30'),
+  ('Cohort 2', '', '2023-02-01', '2023-07-31');
+
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
   ('Cohort 1', '', '2023-01-01', '2023-06-30'),
@@ -7,8 +12,8 @@ VALUES
 
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
-  ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', 'avatar1.jpg', true, 1),
-  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', 'avatar2.jpg', true, 2);
+  ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', '', true, 1),
+  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', '', true, 2);
 
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
 VALUES
