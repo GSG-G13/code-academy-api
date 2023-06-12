@@ -9,7 +9,6 @@ INSERT INTO users (full_name, username, email, password, avatar, is_active, care
 VALUES
   ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', 'avatar1.jpg', true, 1),
   ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', 'avatar2.jpg', true, 2),
-  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$EXkKb.e1TQrSJkoGnbQ2nO5.V2uWuIOeLqwICylJEj5cG1BTXblBa', 'avatar2.jpg', true, 2);
 
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
 VALUES
