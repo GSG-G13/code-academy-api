@@ -5,7 +5,7 @@ const clientError = (req: Request, res: Response, next: NextFunction) => {
   res.status(404).json({
     error: true,
     data: {
-      message: 'Bad Request',
+      message: '404 Error',
     },
   });
 };
