@@ -1,3 +1,3 @@
-import { customError } from '../utils/CustomError';
+import addUser from './admin';
 
-export default { customError };
+export default addUser;

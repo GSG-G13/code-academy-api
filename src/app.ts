@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
 import { PORT } from './config';
+import routes from './routes';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -15,6 +16,7 @@ app.use([
   cookieParser(),
   compression(),
   cors(),
+  routes,
 ]);
 
 app.get('/', (req: Request, res: Response) => {

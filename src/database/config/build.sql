@@ -18,7 +18,7 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   avatar TEXT,
   is_active Boolean,
-  career_status_id int NOT NULL DEFAULT 0,
+  career_status_id int,
   FOREIGN KEY (career_status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
