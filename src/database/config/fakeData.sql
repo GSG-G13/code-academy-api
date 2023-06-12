@@ -1,10 +1,5 @@
 BEGIN;
 
-INSERT INTO users (name, thumbnail, start_date, end_date)
-VALUES
-  ('Cohort 1', '', '2023-01-01', '2023-06-30'),
-  ('Cohort 2', '', '2023-02-01', '2023-07-31');
-
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
   ('Cohort 1', '', '2023-01-01', '2023-06-30'),
