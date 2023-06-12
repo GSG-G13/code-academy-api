@@ -1,3 +1,4 @@
 import { hashPassword, comparePassword } from './bcrypt';
+import CustomError from './CustomError';
 
-export { hashPassword, comparePassword };
+export { hashPassword, comparePassword, CustomError };
