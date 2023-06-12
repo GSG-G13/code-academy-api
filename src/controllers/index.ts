@@ -1,3 +1,3 @@
-import signInController from './auth';
+import signInController from './admin';
 
 export default signInController;

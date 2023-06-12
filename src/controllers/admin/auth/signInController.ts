@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
-import loginSchema from '../../utils/validation';
-import getUserByEmailQuery from '../../database';
-import { comparePassword, signToken } from '../../utils';
+import loginSchema from '../../../utils/validation';
+import getUserByEmailQuery from '../../../database';
+import { comparePassword, signToken } from '../../../utils';
+import { CustomError } from '../../../utils/helpers';
 
 interface SignInRequest extends Request {
   body: {
@@ -16,18 +17,17 @@ const signInController = async (req: SignInRequest, res: Response) => {
     await loginSchema.validateAsync({ email, password });
     const { rows } = await getUserByEmailQuery({ email });
     if (!rows.length) {
-      throw new Error('Invalid email or password');
+      throw new CustomError('Invalid email or password', 401);
     }
     const checkPassword = await comparePassword(password, rows[0].password);
     if (!checkPassword) {
-      throw new Error('Invalid email or password');
+      throw new CustomError('Invalid email or password', 401);
     }
     const token = await signToken(
       {
         id: rows[0].id,
         username: rows[0].username,
         email: rows[0].email,
-        avatar: rows[0].avatar,
       },
       {
         expiresIn: '1d',
@@ -45,7 +45,6 @@ const signInController = async (req: SignInRequest, res: Response) => {
             id: rows[0].id,
             email: rows[0].email,
             username: rows[0].username,
-            avatar: rows[0].avatar,
           },
         },
       });
