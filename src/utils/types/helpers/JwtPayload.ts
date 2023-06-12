@@ -2,7 +2,7 @@ interface JwtPayload {
   id: number;
   username: string;
   email: string;
-  image: string;
+  avatar: string;
 }
 
 export default JwtPayload;
