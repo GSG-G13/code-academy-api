@@ -2,7 +2,7 @@ const generatePassword = (): string => {
   const lowercase = 'abcdefghijklmnopqrstuvwxyz';
   const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numbers = '0123456789';
-  const specialChars = '!@#$%^&*?';
+  const specialChars = '!@#$%&*?';
 
   const getRandomCharacter = (characters: string): string => {
     const randomIndex = Math.floor(Math.random() * characters.length);
