@@ -4,6 +4,7 @@ import cors from 'cors';
 import compression from 'compression';
 import { PORT } from './config';
 import router from './routes';
+import { clientError, serverError } from './controllers';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -28,5 +29,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.use('/api/v1/', router);
+app.use(clientError);
+app.use(serverError);
 
 export default app;

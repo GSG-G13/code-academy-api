@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import loginSchema from '../../../utils/validation';
 import getUserByEmailQuery from '../../../database';
 import { comparePassword, signToken } from '../../../utils';
@@ -11,7 +11,7 @@ interface SignInRequest extends Request {
   };
 }
 
-const signInController = async (req: SignInRequest, res: Response) => {
+const signInController = async (req: SignInRequest, res: Response, next: NextFunction) => {
   const { email, password } = req.body;
   try {
     await loginSchema.validateAsync({ email, password });
@@ -49,13 +49,8 @@ const signInController = async (req: SignInRequest, res: Response) => {
         },
       });
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    res.status(500).json({
-      error: true,
-      data: {
-        message: error.message,
-      },
-    });
+  } catch (error) {
+    next(error);
   }
 };
 
