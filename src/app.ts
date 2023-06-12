@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
@@ -16,16 +16,8 @@ app.use([
   cookieParser(),
   compression(),
   cors(),
-  routes,
 ]);
 
-app.get('/', (req: Request, res: Response) => {
-  res.json({
-    error: false,
-    data: {
-      message: 'Happy Hacking! 🚀',
-    },
-  });
-});
+app.use('/api/v1', routes);
 
 export default app;
