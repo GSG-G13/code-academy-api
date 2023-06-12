@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
 import { PORT } from './config';
+import router from './routes';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -25,5 +26,7 @@ app.get('/', (req: Request, res: Response) => {
     },
   });
 });
+
+app.use('/api/v1/', router);
 
 export default app;
