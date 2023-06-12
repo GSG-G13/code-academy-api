@@ -1,1 +1,3 @@
-export * from "./connection";
+import connection from './connection';
+
+export default { connection };
