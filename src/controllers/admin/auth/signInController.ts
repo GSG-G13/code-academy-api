@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import loginSchema from '../../../utils/validation';
+import { loginSchema } from '../../../utils/validation';
 import getUserByEmailQuery from '../../../database';
 import { comparePassword, signToken } from '../../../utils';
 import { CustomError } from '../../../utils/helpers';
@@ -14,7 +14,7 @@ interface SignInRequest extends Request {
 const signInController = async (req: SignInRequest, res: Response, next: NextFunction) => {
   const { email, password } = req.body;
   try {
-    await loginSchema.validateAsync({ email, password });
+    await loginSchema.validateAsync({ email, password }, { abortEarly: false });
     const { rows } = await getUserByEmailQuery({ email });
     if (!rows.length) {
       throw new CustomError('Invalid email or password', 401);
@@ -48,7 +48,6 @@ const signInController = async (req: SignInRequest, res: Response, next: NextFun
           },
         },
       });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error) {
     next(error);
   }

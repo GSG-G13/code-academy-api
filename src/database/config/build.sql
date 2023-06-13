@@ -2,7 +2,7 @@ BEGIN;
 
 DROP TABLE IF EXISTS users, user_roles, roles, cohorts, posts, likes, career_status, notes, comments, saved_posts CASCADE;
 
--- SET TIME ZONE 'UTC';
+SET TIME ZONE 'UTC';
 
 CREATE TABLE career_status (
   id SERIAL PRIMARY KEY,
@@ -18,9 +18,12 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   avatar TEXT,
   is_active Boolean,
-  career_status_id int NOT NULL DEFAULT 0,
+  career_status_id int,
   FOREIGN KEY (career_status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
+VALUES
+  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$pcMfk/xZrvtLNyWJVv76deHdb8TnuoIazWu66OjM59X/8L37M96Ae', '', false, 3);
 
 CREATE TABLE roles (
   id SERIAL PRIMARY KEY,
