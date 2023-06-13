@@ -1,7 +1,7 @@
 import { signToken, verifyToken } from './jwt';
 import { hashPassword, comparePassword, CustomError } from './helpers';
 import { User, RoleType, JwtPayload } from './types';
-import { loginSchema, addUserSchema } from './validation';
+import { loginSchema, addUserSchema, addCohortSchema } from './validation';
 
 export {
   signToken,
@@ -13,5 +13,6 @@ export {
   JwtPayload,
   loginSchema,
   addUserSchema,
+  addCohortSchema,
   CustomError,
 };
