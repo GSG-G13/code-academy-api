@@ -1,3 +1,3 @@
-import loginSchema from './auth';
+import { loginSchema, addUserSchema } from './auth';
 
-export default loginSchema;
+export { loginSchema, addUserSchema };

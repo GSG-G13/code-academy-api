@@ -1,3 +1,4 @@
+import addUser from './addUsers';
 import signInController from './auth';
 
-export default signInController;
+export { signInController, addUser };

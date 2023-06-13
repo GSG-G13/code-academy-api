@@ -1,5 +1,17 @@
 import { signToken, verifyToken } from './jwt';
-import { hashPassword, comparePassword } from './helpers';
+import { hashPassword, comparePassword, CustomError } from './helpers';
 import { User, RoleType, JwtPayload } from './types';
+import { loginSchema, addUserSchema } from './validation';
 
-export { signToken, verifyToken, hashPassword, comparePassword, User, RoleType, JwtPayload };
+export {
+  signToken,
+  verifyToken,
+  hashPassword,
+  comparePassword,
+  User,
+  RoleType,
+  JwtPayload,
+  loginSchema,
+  addUserSchema,
+  CustomError,
+};
