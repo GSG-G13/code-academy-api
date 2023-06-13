@@ -3,22 +3,24 @@ import { generateUsername, generatePassword, hashPassword } from '../../utils/he
 import { CustomError, addUserSchema } from '../../utils';
 import createUserQuery from '../../database/query/admin/createUserQuery';
 import createUserRoleQuery from '../../database/query/admin/createUserRoleQuery';
-import getUserByEmailQuery from '../../database';
+import { getUserByEmailQuery } from '../../database';
 import { AddUserRequest, User } from '../../utils/types';
 import sendEmail from '../../utils/email/sendEmail';
 import { generateWelcomeTemplate } from '../../utils/email';
 
-const addUser = async (req: AddUserRequest, res: Response, next:NextFunction) => {
-  const { users, cohortId, roleId } = req.body;
-
-  const filteredUsers = users.filter((user, index, array) => {
-    const userIndex = array.findIndex((u) => u.email === user.email);
-    return userIndex === index;
-  });
-
-  req.body.users = filteredUsers;
-
+const addUser = async (req: AddUserRequest, res: Response, next: NextFunction) => {
   try {
+    if (!req.user?.isAdmin) throw new CustomError('Unauthorized', 401);
+
+    const { users, cohortId, roleId } = req.body;
+
+    const filteredUsers = users.filter((user, index, array) => {
+      const userIndex = array.findIndex((u) => u.email === user.email);
+      return userIndex === index;
+    });
+
+    req.body.users = filteredUsers;
+
     await addUserSchema.validateAsync(
       { users: filteredUsers, cohortId, roleId },
       { abortEarly: false },
