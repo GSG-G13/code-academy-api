@@ -1,14 +1,14 @@
 import { NextFunction, Response } from 'express';
-import { generateUsername, generatePassword, hashPassword } from '../../utils/helpers';
-import { CustomError, addUserSchema } from '../../utils';
-import createUserQuery from '../../database/query/admin/createUserQuery';
-import createUserRoleQuery from '../../database/query/admin/createUserRoleQuery';
-import { getUserByEmailQuery } from '../../database';
-import { AddUserRequest, User } from '../../utils/types';
-import sendEmail from '../../utils/email/sendEmail';
-import { generateWelcomeTemplate } from '../../utils/email';
+import { generateUsername, generatePassword, hashPassword } from '../../../utils/helpers';
+import { CustomError, addUserSchema } from '../../../utils';
+import createUserQuery from '../../../database/query/admin/createUserQuery';
+import createUserRoleQuery from '../../../database/query/admin/createUserRoleQuery';
+import { getUserByEmailQuery } from '../../../database';
+import { AddUserRequest, User } from '../../../utils/types';
+import sendEmail from '../../../utils/email/sendEmail';
+import { generateWelcomeTemplate } from '../../../utils/email';
 
-const addUser = async (req: AddUserRequest, res: Response, next: NextFunction) => {
+const addUsersController = async (req: AddUserRequest, res: Response, next: NextFunction) => {
   try {
     if (!req.user?.isAdmin) throw new CustomError('Unauthorized', 401);
 
@@ -62,4 +62,4 @@ const addUser = async (req: AddUserRequest, res: Response, next: NextFunction) =
   }
 };
 
-export default addUser;
+export default addUsersController;

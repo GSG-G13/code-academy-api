@@ -1,4 +1,4 @@
-import { signInController, addUser } from './admin';
+import { signInController, addUsersController } from './admin';
 import { clientError, serverError } from './errors';
 
-export { signInController, clientError, serverError, addUser };
+export { signInController, clientError, serverError, addUsersController };

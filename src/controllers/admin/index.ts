@@ -1,4 +1,4 @@
-import addUser from './addUsers';
+import addUsersController from './users';
 import signInController from './auth';
 
-export { signInController, addUser };
+export { signInController, addUsersController };
