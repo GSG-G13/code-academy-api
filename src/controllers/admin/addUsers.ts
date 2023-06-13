@@ -1,4 +1,4 @@
-import { Response } from 'express';
+import { NextFunction, Response } from 'express';
 import { generateUsername, generatePassword, hashPassword } from '../../utils/helpers';
 import { CustomError, addUserSchema } from '../../utils';
 import createUserQuery from '../../database/query/admin/createUserQuery';
@@ -8,7 +8,7 @@ import { AddUserRequest, User } from '../../utils/types';
 import sendEmail from '../../utils/email/sendEmail';
 import { generateWelcomeTemplate } from '../../utils/email';
 
-const addUser = async (req: AddUserRequest, res: Response) => {
+const addUser = async (req: AddUserRequest, res: Response, next:NextFunction) => {
   const { users, cohortId, roleId } = req.body;
 
   const filteredUsers = users.filter((user, index, array) => {
@@ -18,9 +18,11 @@ const addUser = async (req: AddUserRequest, res: Response) => {
 
   req.body.users = filteredUsers;
 
-  await addUserSchema.validateAsync({ users: filteredUsers, cohortId, roleId });
-
   try {
+    await addUserSchema.validateAsync(
+      { users: filteredUsers, cohortId, roleId },
+      { abortEarly: false },
+    );
     const emailExistsPromises = filteredUsers.map(async (user: User) => {
       const { email } = user;
       const { rowCount } = await getUserByEmailQuery({ email });
@@ -53,9 +55,8 @@ const addUser = async (req: AddUserRequest, res: Response) => {
         message: 'Accounts created successfully',
       },
     });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (err: any) {
-    res.status(500).json({ error: true, data: { err: err.message } });
+  } catch (err) {
+    next(err);
   }
 };
 
