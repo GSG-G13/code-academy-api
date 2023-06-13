@@ -3,7 +3,8 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
 import { PORT } from './config';
-import routes from './routes';
+import router from './routes';
+import { clientError, serverError } from './controllers';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -18,6 +19,8 @@ app.use([
   cors(),
 ]);
 
-app.use('/api/v1', routes);
+app.use('/api/v1/', router);
+app.use(clientError);
+app.use(serverError);
 
 export default app;
