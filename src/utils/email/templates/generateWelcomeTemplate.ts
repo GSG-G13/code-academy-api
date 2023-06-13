@@ -91,7 +91,7 @@ const generateWelcomeTemplate = (fullName: String, email: String, password: Stri
                           font-family: 'Rubik', sans-serif;
                         "
                       >
-                        Congratulations <h3 style="padding: 22px; color: blueviolet; margin: 20px auto; background: aliceblue; width: fit-content; border-radius: 8px;">${fullName}<h3>
+                        Congratulations 🎉 <h3 style="padding: 10px 75px; color: blueviolet; margin: 20px auto; width: fit-content; border-radius: 8px; font-size: 1.3rem; text-transform: uppercase;">${fullName}<h3>
                       </h1>
                       <p
                         style="
