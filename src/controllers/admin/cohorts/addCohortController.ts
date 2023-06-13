@@ -20,6 +20,12 @@ const addCohortController = async (req: AddCohortRequest, res: Response, next: N
       throw new CustomError('Cohort name is already exists', 400);
     }
     await AddCohortQuery({ name, thumbnail, startDate, endDate });
+    res.status(200).json({
+      error: false,
+      data: {
+        message: 'Cohort created successfully!',
+      },
+    });
   } catch (error) {
     next(error);
   }

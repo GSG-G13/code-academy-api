@@ -6,7 +6,7 @@ interface Args {
 
 const getCohortByNameQuery = ({ name }: Args) => {
   const sql = {
-    text: 'SELECT * FROM cohorts WHERE name = $1 RETURNING *',
+    text: 'SELECT * FROM cohorts WHERE name = $1',
     values: [name],
   };
   return connection.query(sql);
