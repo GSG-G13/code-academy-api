@@ -1,3 +1,4 @@
 import signInController from './admin';
+import { clientError, serverError } from './errors';
 
-export default signInController;
+export { signInController, clientError, serverError };
