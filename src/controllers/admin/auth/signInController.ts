@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { loginSchema } from '../../../utils/validation';
-import getUserByEmailQuery from '../../../database';
+import { getUserByEmailQuery } from '../../../database';
 import { comparePassword, signToken } from '../../../utils';
 import { CustomError } from '../../../utils/helpers';
 

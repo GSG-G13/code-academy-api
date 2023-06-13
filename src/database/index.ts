@@ -1,3 +1,3 @@
-import getUserByEmailQuery from './query';
+import { getUserByEmailQuery, getUserRoles } from './query';
 
-export default getUserByEmailQuery;
+export { getUserByEmailQuery, getUserRoles };
