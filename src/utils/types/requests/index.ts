@@ -1,7 +1,11 @@
 import { Request } from 'express';
-import { User } from '../helpers';
+import { Decoded, User } from '../helpers';
 
-interface AddUserRequest extends Request {
+interface RequestWithDecoded extends Request {
+  user?: Decoded;
+}
+
+interface AddUserRequest extends RequestWithDecoded {
   body: {
     users: User[];
     cohortId: number;
@@ -16,4 +20,4 @@ interface SignInRequest extends Request {
   };
 }
 
-export { SignInRequest, AddUserRequest };
+export { SignInRequest, AddUserRequest, RequestWithDecoded };
