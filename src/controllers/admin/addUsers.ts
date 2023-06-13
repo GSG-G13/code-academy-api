@@ -3,10 +3,10 @@ import { generateUsername, generatePassword, hashPassword } from '../../utils/he
 import { CustomError, addUserSchema } from '../../utils';
 import createUserQuery from '../../database/query/admin/createUserQuery';
 import createUserRoleQuery from '../../database/query/admin/createUserRoleQuery';
-import getUserByEmailQuery from '../../database';
 import { AddUserRequest, User } from '../../utils/types';
 import sendEmail from '../../utils/email/sendEmail';
 import { generateWelcomeTemplate } from '../../utils/email';
+import { getUserByEmailQuery } from '../../database';
 
 const addUser = async (req: AddUserRequest, res: Response, next:NextFunction) => {
   const { users, cohortId, roleId } = req.body;

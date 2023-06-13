@@ -1,3 +1,4 @@
 import getUserByEmailQuery from './auth';
+import { createUserQuery, createUserRoleQuery, AddCohortQuery } from './admin';
 
-export default getUserByEmailQuery;
+export { getUserByEmailQuery, createUserQuery, createUserRoleQuery, AddCohortQuery };
