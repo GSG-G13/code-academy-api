@@ -4,7 +4,7 @@ import { JsonWebTokenError } from 'jsonwebtoken';
 import { CustomError } from '../../utils/helpers';
 
 // eslint-disable-next-line no-unused-vars
-const serverError = (err: CustomError, req: Request, res: Response, next: NextFunction) => {
+const serverError = (err: CustomError, req: Request, res: Response, _next: NextFunction) => {
   if (err instanceof ValidationError) {
     return res.status(422).json({
       error: true,
