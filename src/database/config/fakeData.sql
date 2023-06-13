@@ -10,6 +10,7 @@ VALUES
   ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', 'avatar1.jpg', true, 1),
   ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', 'avatar2.jpg', true, 2);
 
+
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
 VALUES
   ('Hello, world!', 'https://i.pinimg.com/564x/2f/f0/80/2ff08011a5379cad8d2f2b6afa8d10cb.jpg', true, 1, 1),
