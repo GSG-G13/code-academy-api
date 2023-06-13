@@ -2,7 +2,7 @@ interface JwtPayload {
   id: number;
   username: string;
   email: string;
-  userRoleId : number;
+  userRoles :number[];
 }
 
 export default JwtPayload;
