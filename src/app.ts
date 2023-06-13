@@ -1,8 +1,10 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import compression from 'compression';
 import { PORT } from './config';
+import router from './routes';
+import { clientError, serverError } from './controllers';
 
 const app = express();
 app.set('port', PORT || 3000);
@@ -17,13 +19,8 @@ app.use([
   cors(),
 ]);
 
-app.get('/', (req: Request, res: Response) => {
-  res.json({
-    error: false,
-    data: {
-      message: 'Happy Hacking! 🚀',
-    },
-  });
-});
+app.use('/api/v1/', router);
+app.use(clientError);
+app.use(serverError);
 
 export default app;

@@ -7,8 +7,9 @@ VALUES
 
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
-  ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', 'avatar1.jpg', true, 1),
-  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', 'avatar2.jpg', true, 2);
+  ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', '', true, 1),
+  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', '', true, 2);
+
 
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
 VALUES
