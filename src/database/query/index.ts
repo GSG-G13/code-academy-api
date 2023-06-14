@@ -1,4 +1,4 @@
-import getUserByEmailQuery from './auth';
+import { getUserByEmailQuery, getUserRoles } from './auth';
 import {
   createUserQuery,
   createUserRoleQuery,
@@ -8,6 +8,7 @@ import {
 
 export {
   getUserByEmailQuery,
+  getUserRoles,
   createUserQuery,
   createUserRoleQuery,
   AddCohortQuery,

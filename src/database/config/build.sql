@@ -23,7 +23,7 @@ CREATE TABLE users (
 );
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
-  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$pcMfk/xZrvtLNyWJVv76deHdb8TnuoIazWu66OjM59X/8L37M96Ae', '', false, 3);
+  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$EXkKb.e1TQrSJkoGnbQ2nO5.V2uWuIOeLqwICylJEj5cG1BTXblBa', 'avatar2.jpg', true, 2);
 
 CREATE TABLE roles (
   id SERIAL PRIMARY KEY,
@@ -44,11 +44,13 @@ CREATE TABLE user_roles (
   id SERIAL PRIMARY KEY,
   user_id int NOT NULL ,
   role_id int NOT NULL,
-  cohort_id int NOT NULL,
+  cohort_id int,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (cohort_id) REFERENCES cohorts(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO user_roles (user_id, role_id, cohort_id) VALUES (1, 1, null);
 
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
