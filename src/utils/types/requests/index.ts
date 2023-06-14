@@ -29,4 +29,15 @@ interface AddCohortRequest extends RequestWithDecoded {
   };
 }
 
-export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest };
+interface EditPostRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+    isPublic: boolean;
+    cohortId: number;
+  };
+  params: {
+    postId: string;
+  };
+}
+
+export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest, EditPostRequest };

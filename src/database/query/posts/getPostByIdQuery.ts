@@ -1,13 +1,13 @@
 import connection from '../../config/connection';
 
 interface PostId {
-  postId: number;
+  onePostId: number;
 }
 
-const getPostByIdQuery = ({ postId }: PostId) => {
+const getPostByIdQuery = ({ onePostId }: PostId) => {
   const sql = {
     text: 'SELECT * FROM posts WHERE id = $1',
-    values: [postId],
+    values: [onePostId],
   };
   return connection.query(sql);
 };
