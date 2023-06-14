@@ -7,6 +7,5 @@ const router: Router = express.Router();
 router.use('/auth', authRouter);
 router.use('/users', userRouter);
 router.use('/cohorts', cohortsRouter);
-router.use('/posts', deletePostRouter);
-
+router.use('/posts/:id', deletePostRouter);
 export default router;
