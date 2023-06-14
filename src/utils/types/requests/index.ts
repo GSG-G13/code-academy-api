@@ -20,4 +20,13 @@ interface SignInRequest extends Request {
   };
 }
 
-export { SignInRequest, AddUserRequest, RequestWithDecoded };
+interface AddCohortRequest extends RequestWithDecoded {
+  body: {
+    name: string;
+    thumbnail: string;
+    startDate: Date;
+    endDate: Date;
+  };
+}
+
+export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest };
