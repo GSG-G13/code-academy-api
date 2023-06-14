@@ -1,4 +1,5 @@
 import { getUserByEmailQuery, getUserRoles } from './auth';
+import getAllPostsCommunityQuery from './posts';
 import {
   createUserQuery,
   createUserRoleQuery,
@@ -13,4 +14,5 @@ export {
   createUserRoleQuery,
   AddCohortQuery,
   getCohortByNameQuery,
+  getAllPostsCommunityQuery,
 };
