@@ -1,9 +1,9 @@
 import connection from '../../config/connection';
 
-interface DeleltePost {
+interface DeletePost {
 id:number;
 }
-const deletePostOuery = ({ id }:DeleltePost) => {
+const deletePostQuery = ({ id }:DeletePost) => {
   const sql = {
     text: 'DELETE FROM posts WHERE id = $1  RETURNING id',
     values: [id],
@@ -12,4 +12,4 @@ const deletePostOuery = ({ id }:DeleltePost) => {
   return connection.query(sql);
 };
 
-export default deletePostOuery;
+export default deletePostQuery;
