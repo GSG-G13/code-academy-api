@@ -7,6 +7,7 @@ import {
   AddCohort,
   GetPosts,
   CohortId,
+  CohortOffset,
 } from './helpers';
 import {
   SignInRequest,
@@ -27,5 +28,6 @@ export {
   AddCohort,
   GetPosts,
   CohortId,
+  CohortOffset,
   GetCohortPostsRequest,
 };
