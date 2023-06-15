@@ -5,8 +5,8 @@ import { EditPostRequest } from '../../utils/types';
 
 const editPostController = async (req: EditPostRequest, res: Response, next: NextFunction) => {
   try {
-    const { postId } = req.params;
-    const { rows } = await getPostByIdQuery({ id: +postId });
+    const { id } = req.params;
+    const { rows } = await getPostByIdQuery({ id: +id });
     if (!rows.length) {
       throw new CustomError('Post is not exist', 400);
     }
@@ -14,8 +14,8 @@ const editPostController = async (req: EditPostRequest, res: Response, next: Nex
       throw new CustomError('Unauthorized!', 401);
     }
     const { content } = req.body;
-    await editPostSchema.validateAsync({ postId, content }, { abortEarly: false });
-    const { rows: post } = await editPostQuery({ content, postId: +postId });
+    await editPostSchema.validateAsync({ id, content }, { abortEarly: false });
+    const { rows: post } = await editPostQuery({ content, id: +id });
     res.status(300).json({
       error: false,
       data: {

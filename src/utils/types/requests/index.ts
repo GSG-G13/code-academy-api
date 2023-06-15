@@ -34,7 +34,7 @@ interface EditPostRequest extends RequestWithDecoded {
     content: string;
   };
   params: {
-    postId: string;
+    id: string;
   };
 }
 

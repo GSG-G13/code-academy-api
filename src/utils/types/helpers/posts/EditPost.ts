@@ -1,6 +1,6 @@
-interface EditPost {
+interface EditPostQuery {
+  id: number;
   content: string;
-  postId: number;
 }
 
-export default EditPost;
+export default EditPostQuery;

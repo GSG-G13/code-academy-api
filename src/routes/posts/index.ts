@@ -5,7 +5,7 @@ import checkAuth from '../../middlewares';
 const postsRouter: Router = express.Router();
 
 postsRouter.use(checkAuth);
-postsRouter.put('/:postId', editPostController);
+postsRouter.put('/:id', editPostController);
 postsRouter.delete('/:id', deletePostController);
 
 export default postsRouter;
