@@ -32,8 +32,6 @@ interface AddCohortRequest extends RequestWithDecoded {
 interface EditPostRequest extends RequestWithDecoded {
   body: {
     content: string;
-    isPublic: boolean;
-    cohortId: number;
   };
   params: {
     postId: string;
