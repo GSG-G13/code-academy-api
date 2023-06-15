@@ -1,5 +1,5 @@
 interface GetPosts {
-  cohortId: Number;
+  cohortName: String;
 }
 
 export default GetPosts;
