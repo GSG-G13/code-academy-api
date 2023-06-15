@@ -11,6 +11,9 @@ const sendEmail = async (to: string, subject: string, message: string) => {
       user: `${EMAIL}`,
       pass: `${EMAIL_PASSWORD}`,
     },
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
 
   const mailOptions = {

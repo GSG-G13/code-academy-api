@@ -5,6 +5,7 @@ import {
   createUserRoleQuery,
   getCohortByNameQuery,
   getUserRoles,
+  addPostQuery,
 } from './query';
 
 export {
@@ -14,4 +15,5 @@ export {
   createUserQuery,
   createUserRoleQuery,
   getCohortByNameQuery,
+  addPostQuery,
 };

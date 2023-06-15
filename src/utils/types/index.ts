@@ -1,5 +1,5 @@
-import { User, RoleType, JwtPayload, Decoded, Roles, AddCohort, AddPost } from './helpers';
-import { SignInRequest, AddUserRequest, RequestWithDecoded } from './requests';
+import { User, RoleType, JwtPayload, Decoded, Roles, AddCohort, AddPostQuery } from './helpers';
+import { SignInRequest, AddUserRequest, RequestWithDecoded, AddPostRequest } from './requests';
 
 export {
   User,
@@ -11,5 +11,6 @@ export {
   RequestWithDecoded,
   Roles,
   AddCohort,
-  AddPost,
+  AddPostQuery,
+  AddPostRequest,
 };

@@ -1,3 +1,3 @@
-import addPostSchema from './addPostSchema';
+import validateAddPostSchema from './addPostSchema';
 
-export default addPostSchema;
+export default validateAddPostSchema;

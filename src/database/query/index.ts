@@ -5,6 +5,7 @@ import {
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
+import addPostQuery from './posts';
 
 export {
   getUserByEmailQuery,
@@ -13,4 +14,5 @@ export {
   createUserRoleQuery,
   AddCohortQuery,
   getCohortByNameQuery,
+  addPostQuery,
 };

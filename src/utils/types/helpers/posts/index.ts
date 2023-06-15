@@ -1,3 +1,3 @@
-import AddPost from './AddPost';
+import AddPostQuery from './AddPostQuery';
 
-export default AddPost;
+export default AddPostQuery;
