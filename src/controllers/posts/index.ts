@@ -1,3 +1,4 @@
-import getAllPostsController from './getAllPostsController';
+import getAllPostsCommunityController from './getAllPostsCommunityController';
+import getPostsCohortController from './getPostsCohortController';
 
-export default getAllPostsController;
+export { getAllPostsCommunityController, getPostsCohortController };
