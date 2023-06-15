@@ -1,13 +1,13 @@
 import connection from '../../config/connection';
 
 interface Args {
-  userId: number;
+  id: number;
 }
 
-const getPostByIdQuery = ({ userId }: Args) => {
+const getPostByIdQuery = ({ id }: Args) => {
   const sql = {
-    text: 'SELECT * FROM posts WHERE  user_id = $1',
-    values: [userId],
+    text: 'SELECT * FROM posts WHERE  id= $1',
+    values: [id],
   };
   return connection.query(sql);
 };
