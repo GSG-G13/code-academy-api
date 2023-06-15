@@ -1,3 +1,4 @@
 import editPostController from './editPostController';
+import deletePostController from './deletePostController';
 
-export default editPostController;
+export { editPostController, deletePostController };

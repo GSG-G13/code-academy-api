@@ -38,4 +38,17 @@ interface EditPostRequest extends RequestWithDecoded {
   };
 }
 
-export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest, EditPostRequest };
+interface DeletePostRequest extends RequestWithDecoded {
+  params: {
+    id: string;
+  };
+}
+
+export {
+  SignInRequest,
+  AddUserRequest,
+  RequestWithDecoded,
+  AddCohortRequest,
+  EditPostRequest,
+  DeletePostRequest,
+};

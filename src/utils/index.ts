@@ -10,7 +10,13 @@ import {
   AddCohort,
   EditPost,
 } from './types';
-import { loginSchema, addUserSchema, addCohortSchema, editPostSchema } from './validation';
+import {
+  loginSchema,
+  addUserSchema,
+  addCohortSchema,
+  editPostSchema,
+  deletePostSchema,
+} from './validation';
 
 export {
   signToken,
@@ -26,6 +32,7 @@ export {
   addUserSchema,
   addCohortSchema,
   editPostSchema,
+  deletePostSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,

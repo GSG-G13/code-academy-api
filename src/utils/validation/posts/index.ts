@@ -1,3 +1,4 @@
 import editPostSchema from './editPostSchema';
+import deletePostSchema from './deletePostSchema';
 
-export default editPostSchema;
+export { editPostSchema, deletePostSchema };
