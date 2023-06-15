@@ -13,13 +13,14 @@ const editPostController = async (req: EditPostRequest, res: Response, next: Nex
     if (rows[0].user_id !== req.user?.id) {
       throw new CustomError('Unauthorized!', 401);
     }
-    const { content, isPublic, cohortId } = req.body;
-    await editPostSchema.validateAsync({ content, isPublic, cohortId }, { abortEarly: false });
-    await editPostQuery({ content, postId: +postId });
+    const { content } = req.body;
+    await editPostSchema.validateAsync({ postId, content }, { abortEarly: false });
+    const { rows: post } = await editPostQuery({ content, postId: +postId });
     res.status(300).json({
       error: false,
       data: {
         message: 'Post edited Successfully!',
+        post: post[0],
       },
     });
   } catch (error) {
