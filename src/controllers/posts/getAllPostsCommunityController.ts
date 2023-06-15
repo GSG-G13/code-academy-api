@@ -8,7 +8,10 @@ const getAllPostsCommunityController = async (
   next: NextFunction,
 ) => {
   try {
-    const allData = await getAllPostsCommunityQuery();
+    const { page } = req.query;
+
+    const offset = (Number(page || 1) - 1) * 10;
+    const allData = await getAllPostsCommunityQuery({ offset });
     const data = allData.rows;
 
     res.status(201).json({
