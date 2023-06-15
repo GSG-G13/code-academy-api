@@ -9,13 +9,15 @@ const getPostsCohortController = async (
   next: NextFunction,
 ) => {
   try {
+    const { page } = req.query;
+    const offset = (Number(page || 1) - 1) * 10;
     const { stringId } = req.params;
     const id = +stringId;
     const dataUser = req.user;
     const roles = dataUser?.roles;
 
     if (!roles || dataUser.isAdmin === true) {
-      const { rows, rowCount } = await getAllPostsCohortQuery({ id });
+      const { rows, rowCount } = await getAllPostsCohortQuery({ id, offset });
       if (!rowCount) throw new CustomError('The cohort does not exist', 404);
 
       return res.status(200).json({ message: 'Success', data: rows });
@@ -23,7 +25,7 @@ const getPostsCohortController = async (
 
     const findCohortAccess = roles.filter((role) => role.cohort_id === id);
     if (!findCohortAccess.length) throw new CustomError('Unauthorized', 400);
-    const { rows, rowCount } = await getAllPostsCohortQuery({ id });
+    const { rows, rowCount } = await getAllPostsCohortQuery({ id, offset });
     if (!rowCount) throw new CustomError('The cohort does not exist', 404);
 
     return res.status(200).json({ message: 'Success', data: rows });
