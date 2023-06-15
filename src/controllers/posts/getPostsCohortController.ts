@@ -28,7 +28,13 @@ const getPostsCohortController = async (
     const { rows, rowCount } = await getAllPostsCohortQuery({ id, offset });
     if (!rowCount) throw new CustomError('The cohort does not exist', 404);
 
-    return res.status(200).json({ message: 'Success', data: rows });
+    return res.status(200).json({
+      error: 'Success',
+      data: {
+        message: 'Success',
+        posts: rows,
+      },
+    });
   } catch (err) {
     return next(err);
   }

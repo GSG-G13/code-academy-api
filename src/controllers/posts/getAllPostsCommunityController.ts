@@ -15,8 +15,11 @@ const getAllPostsCommunityController = async (
     const data = allData.rows;
 
     res.status(201).json({
-      message: 'Success',
-      data,
+      error: 'Success',
+      data: {
+        message: 'Success',
+        posts: data,
+      },
     });
   } catch (err) {
     next(err);
