@@ -1,3 +1,4 @@
 import getAllPostsCommunityQuery from './getAllPostsCommunityQuery';
+import getAllPostsCohortQuery from './getAllPostsCohortQuery';
 
-export default getAllPostsCommunityQuery;
+export { getAllPostsCommunityQuery, getAllPostsCohortQuery };
