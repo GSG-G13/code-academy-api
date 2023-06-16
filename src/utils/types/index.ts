@@ -5,16 +5,10 @@ import {
   Decoded,
   Roles,
   AddCohort,
-  GetPosts,
-  CohortId,
-  CohortOffset,
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
 } from './helpers';
-import {
-  SignInRequest,
-  AddUserRequest,
-  RequestWithDecoded,
-  GetCohortPostsRequest,
-} from './requests';
+import { SignInRequest, AddUserRequest, RequestWithDecoded, CohortParmRequest } from './requests';
 
 export {
   User,
@@ -26,8 +20,7 @@ export {
   RequestWithDecoded,
   Roles,
   AddCohort,
-  GetPosts,
-  CohortId,
-  CohortOffset,
-  GetCohortPostsRequest,
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
+  CohortParmRequest,
 };

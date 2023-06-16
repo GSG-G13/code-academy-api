@@ -29,14 +29,8 @@ interface AddCohortRequest extends RequestWithDecoded {
   };
 }
 
-interface GetCohortPostsRequest extends RequestWithDecoded {
-  params: { stringId: string };
+interface CohortParmRequest extends RequestWithDecoded {
+  params: { cohortId: string };
 }
 
-export {
-  SignInRequest,
-  AddUserRequest,
-  RequestWithDecoded,
-  AddCohortRequest,
-  GetCohortPostsRequest,
-};
+export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest, CohortParmRequest };

@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 import { authRouter, userRouter, cohortsRouter } from './admin';
-import postsRouter from './users';
+import postsRouter from './posts';
 
 const router: Router = express.Router();
 

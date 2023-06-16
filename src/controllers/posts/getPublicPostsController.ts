@@ -1,8 +1,8 @@
 import { NextFunction, Response } from 'express';
-import { getAllPostsCommunityQuery } from '../../database/query';
+import { getPublicPostsQuery } from '../../database/query';
 import { RequestWithDecoded } from '../../utils';
 
-const getAllPostsCommunityController = async (
+const getPublicPostsController = async (
   req: RequestWithDecoded,
   res: Response,
   next: NextFunction,
@@ -11,14 +11,14 @@ const getAllPostsCommunityController = async (
     const { page } = req.query;
 
     const offset = (Number(page || 1) - 1) * 10;
-    const allData = await getAllPostsCommunityQuery({ offset });
-    const data = allData.rows;
+    const allData = await getPublicPostsQuery({ offset });
+    const Posts = allData.rows;
 
     res.status(201).json({
       error: 'false',
       data: {
         message: 'Success',
-        posts: data,
+        posts: Posts,
       },
     });
   } catch (err) {
@@ -26,4 +26,4 @@ const getAllPostsCommunityController = async (
   }
 };
 
-export default getAllPostsCommunityController;
+export default getPublicPostsController;

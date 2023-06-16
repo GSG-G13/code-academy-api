@@ -5,8 +5,8 @@ import {
   createUserRoleQuery,
   getCohortByNameQuery,
   getUserRoles,
-  getAllPostsCommunityQuery,
-  getAllPostsCohortQuery,
+  getPublicPostsQuery,
+  getCohortPostsQuery,
 } from './query';
 
 export {
@@ -16,6 +16,6 @@ export {
   createUserQuery,
   createUserRoleQuery,
   getCohortByNameQuery,
-  getAllPostsCommunityQuery,
-  getAllPostsCohortQuery,
+  getPublicPostsQuery,
+  getCohortPostsQuery,
 };

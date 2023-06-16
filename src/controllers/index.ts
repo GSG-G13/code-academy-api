@@ -1,6 +1,6 @@
 import { signInController, addUsersController, addCohortController } from './admin';
 import { clientError, serverError } from './errors';
-import { getAllPostsCommunityController, getPostsCohortController } from './posts';
+import { getPublicPostsController, getPostsCohortController } from './posts';
 
 export {
   signInController,
@@ -8,6 +8,6 @@ export {
   serverError,
   addUsersController,
   addCohortController,
-  getAllPostsCommunityController,
+  getPublicPostsController,
   getPostsCohortController,
 };
