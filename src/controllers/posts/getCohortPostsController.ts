@@ -21,7 +21,7 @@ const getCohortPostsController = async (
     }
     const { id } = rows[0];
 
-    if (!((!roles || req.user?.isAdmin === true) || roles.some((role) => role.cohortId === id))) throw new CustomError('Unauthorized', 401);
+    if (!((!roles || req.user?.isAdmin === true) || roles.some((role) => role.cohort_id === id))) throw new CustomError('Unauthorized', 401);
     const { rows: posts } = await getCohortPostsQuery({ id, offset });
     res.status(200).json({ message: 'Success', data: posts });
   } catch (err) {
