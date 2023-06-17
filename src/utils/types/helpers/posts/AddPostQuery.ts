@@ -3,7 +3,7 @@ interface AddPostQuery {
   content: string;
   image?: string;
   isPublic: boolean;
-  cohortId?: string;
+  cohortId?: number | null;
 }
 
 export default AddPostQuery;
