@@ -1,8 +1,7 @@
 interface Roles {
+  cohort_name: string;
   cohort_id: number;
-  cohortName: string;
-  cohortId: number;
-  roleId: number;
+  role_id: number;
 }
 
 interface Decoded {
