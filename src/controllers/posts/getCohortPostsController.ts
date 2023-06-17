@@ -15,13 +15,17 @@ const getCohortPostsController = async (
     const roles = req.user?.roles;
 
     // eslint-disable-next-line max-len
-    const { rows, rowCount } = await getCohortIdByNameQuery({ cohortName: cohortName.toLowerCase() });
+    const { rows, rowCount } = await getCohortIdByNameQuery({
+      cohortName: cohortName.toLowerCase(),
+    });
     if (!rowCount) {
       throw new CustomError('The cohort does not exist', 404);
     }
     const { id } = rows[0];
 
-    if (!((!roles || req.user?.isAdmin === true) || roles.some((role) => role.cohort_id === id))) throw new CustomError('Unauthorized', 401);
+    if (!(!roles || req.user?.isAdmin === true || roles.some((role) => role.cohort_id === id))) {
+      throw new CustomError('Unauthorized', 401);
+    }
     const { rows: posts } = await getCohortPostsQuery({ id, offset });
     res.status(200).json({ message: 'Success', data: posts });
   } catch (err) {
