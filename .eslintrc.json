@@ -21,8 +21,7 @@
     "import/extensions": "off",
     "object-curly-newline": "off",
     "implicit-arrow-linebreak": "off",
-    "linebreak-style": "off",
-    "operator-linebreak": ["error", "before"]
+    "linebreak-style": "off"
   },
   "ignorePatterns": ["**/__test__/*.ts"]
 }
