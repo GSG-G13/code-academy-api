@@ -1,4 +1,5 @@
-import deletePostQuery from './deletePostQuery';
+import editPostQuery from './editPostQuery';
 import getPostByIdQuery from './getPostByIdQuery';
+import deletePostQuery from './deletePostQuery';
 
-export { deletePostQuery, getPostByIdQuery };
+export { editPostQuery, getPostByIdQuery, deletePostQuery };
