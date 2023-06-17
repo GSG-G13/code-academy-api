@@ -30,7 +30,7 @@ interface AddCohortRequest extends RequestWithDecoded {
 }
 
 interface CohortParmRequest extends RequestWithDecoded {
-  params: { cohortId: string };
+  params: { cohortName: string };
 }
 
 export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest, CohortParmRequest };
