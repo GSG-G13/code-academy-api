@@ -1,4 +1,4 @@
 import getPublicPostsController from './getPublicPostsController';
-import getPostsCohortController from './getPostsCohortController';
+import getCohortPostsController from './getCohortPostsController';
 
-export { getPublicPostsController, getPostsCohortController };
+export { getPublicPostsController, getCohortPostsController };
