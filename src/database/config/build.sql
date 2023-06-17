@@ -58,7 +58,7 @@ CREATE TABLE posts (
   image VARCHAR(255),
   is_public Boolean NOT NULL,
   user_id int NOT NULL,
-  cohort_id int NOT NULL,
+  cohort_id int,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
