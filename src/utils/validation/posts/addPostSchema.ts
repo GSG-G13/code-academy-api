@@ -7,12 +7,17 @@ const validateAddPostSchema = Joi.object({
     'any.required': 'Post content is required',
   }),
   isPublic: Joi.boolean().required().messages({
-    'string.empty': 'Post visibility cannot be empty',
+    'boolean.base': 'isPublic must be a boolean.',
     'any.required': 'Post visibility is required',
   }),
-  cohortId: Joi.number().required().messages({
-    'string.empty': 'Post visibility cannot be empty',
-    'any.required': 'Post visibility is required',
+  cohortId: Joi.number().when('isPublic', {
+    is: false,
+    then: Joi.number()
+      .required()
+      .messages({ 'any.required': 'Cohort ID is required' }),
+    otherwise: Joi.number()
+      .allow(null)
+      .messages({ 'number.base': 'Cohort ID must be a number or null.' }),
   }),
 });
 
