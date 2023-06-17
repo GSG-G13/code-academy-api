@@ -9,8 +9,16 @@ import {
   Roles,
   AddCohort,
   CohortNameQueryArgs,
+  EditPost,
+  PostId,
 } from './types';
-import { loginSchema, addUserSchema, addCohortSchema } from './validation';
+import {
+  loginSchema,
+  addUserSchema,
+  addCohortSchema,
+  editPostSchema,
+  deletePostSchema,
+} from './validation';
 
 export {
   signToken,
@@ -21,12 +29,16 @@ export {
   RoleType,
   JwtPayload,
   AddCohort,
+  EditPost,
   loginSchema,
   addUserSchema,
   addCohortSchema,
+  editPostSchema,
+  deletePostSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,
   Roles,
   CohortNameQueryArgs,
+  PostId,
 };

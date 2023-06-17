@@ -33,4 +33,27 @@ interface CohortParmRequest extends RequestWithDecoded {
   params: { cohortName: string };
 }
 
-export { SignInRequest, AddUserRequest, RequestWithDecoded, AddCohortRequest, CohortParmRequest };
+interface EditPostRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+  };
+  params: {
+    id: string;
+  };
+}
+
+interface DeletePostRequest extends RequestWithDecoded {
+  params: {
+    id: string;
+  };
+}
+
+export {
+  SignInRequest,
+  AddUserRequest,
+  RequestWithDecoded,
+  AddCohortRequest,
+  EditPostRequest,
+  DeletePostRequest,
+  CohortParmRequest,
+};

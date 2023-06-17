@@ -3,7 +3,11 @@ import {
   getPublicPostsQuery,
   getCohortPostsQuery,
   getCohortIdByNameQuery,
+  editPostQuery,
+  getPostByIdQuery,
+  deletePostQuery,
 } from './posts';
+
 import {
   createUserQuery,
   createUserRoleQuery,
@@ -21,4 +25,7 @@ export {
   getPublicPostsQuery,
   getCohortPostsQuery,
   getCohortIdByNameQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 };

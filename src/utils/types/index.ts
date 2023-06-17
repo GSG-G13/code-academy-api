@@ -1,15 +1,24 @@
 import {
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
+  CohortNameQueryArgs,
   User,
   RoleType,
   JwtPayload,
   Decoded,
   Roles,
   AddCohort,
-  CohortPostsQueryArgs,
-  PublicPostsQueryArgs,
-  CohortNameQueryArgs,
+  EditPost,
+  PostId,
 } from './helpers';
-import { SignInRequest, AddUserRequest, RequestWithDecoded, CohortParmRequest } from './requests';
+import {
+  CohortParmRequest,
+  SignInRequest,
+  AddUserRequest,
+  RequestWithDecoded,
+  EditPostRequest,
+  DeletePostRequest,
+} from './requests';
 
 export {
   User,
@@ -19,10 +28,14 @@ export {
   SignInRequest,
   Decoded,
   RequestWithDecoded,
+  EditPostRequest,
+  DeletePostRequest,
   Roles,
   AddCohort,
   CohortPostsQueryArgs,
   PublicPostsQueryArgs,
   CohortParmRequest,
   CohortNameQueryArgs,
+  EditPost,
+  PostId,
 };

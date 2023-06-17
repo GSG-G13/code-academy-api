@@ -8,6 +8,9 @@ import {
   getPublicPostsQuery,
   getCohortPostsQuery,
   getCohortIdByNameQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 } from './query';
 
 export {
@@ -20,4 +23,7 @@ export {
   getPublicPostsQuery,
   getCohortPostsQuery,
   getCohortIdByNameQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 };
