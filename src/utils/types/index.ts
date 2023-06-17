@@ -7,6 +7,7 @@ import {
   AddCohort,
   CohortPostsQueryArgs,
   PublicPostsQueryArgs,
+  CohortNameQueryArgs,
 } from './helpers';
 import { SignInRequest, AddUserRequest, RequestWithDecoded, CohortParmRequest } from './requests';
 
@@ -23,4 +24,5 @@ export {
   CohortPostsQueryArgs,
   PublicPostsQueryArgs,
   CohortParmRequest,
+  CohortNameQueryArgs,
 };

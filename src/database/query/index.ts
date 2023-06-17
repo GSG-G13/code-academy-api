@@ -1,5 +1,9 @@
 import { getUserByEmailQuery, getUserRoles } from './auth';
-import { getPublicPostsQuery, getCohortPostsQuery } from './posts';
+import {
+  getPublicPostsQuery,
+  getCohortPostsQuery,
+  getCohortIdByNameQuery,
+} from './posts';
 import {
   createUserQuery,
   createUserRoleQuery,
@@ -16,4 +20,5 @@ export {
   getCohortByNameQuery,
   getPublicPostsQuery,
   getCohortPostsQuery,
+  getCohortIdByNameQuery,
 };

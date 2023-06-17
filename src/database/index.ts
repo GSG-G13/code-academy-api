@@ -7,6 +7,7 @@ import {
   getUserRoles,
   getPublicPostsQuery,
   getCohortPostsQuery,
+  getCohortIdByNameQuery,
 } from './query';
 
 export {
@@ -18,4 +19,5 @@ export {
   getCohortByNameQuery,
   getPublicPostsQuery,
   getCohortPostsQuery,
+  getCohortIdByNameQuery,
 };
