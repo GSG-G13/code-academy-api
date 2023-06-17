@@ -9,7 +9,7 @@ import {
   Roles,
   AddCohort,
   EditPost,
-  PostId,
+  PostIdQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -37,5 +37,5 @@ export {
   CohortParmRequest,
   CohortNameQueryArgs,
   EditPost,
-  PostId,
+  PostIdQueryArgs,
 };

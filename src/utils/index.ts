@@ -10,7 +10,7 @@ import {
   AddCohort,
   CohortNameQueryArgs,
   EditPost,
-  PostId,
+  PostIdQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -40,5 +40,5 @@ export {
   RequestWithDecoded,
   Roles,
   CohortNameQueryArgs,
-  PostId,
+  PostIdQueryArgs,
 };
