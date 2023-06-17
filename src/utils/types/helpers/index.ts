@@ -3,6 +3,6 @@ import User from './User';
 import RoleType from './RoleType';
 import AddCohort from './AddCohort';
 import { Decoded, Roles } from './Decoded';
-import AddPostQuery from './posts';
+import { AddPostQuery, EditPost } from './posts';
 
-export { User, RoleType, JwtPayload, Decoded, Roles, AddCohort, AddPostQuery };
+export { User, RoleType, JwtPayload, Decoded, Roles, AddCohort, AddPostQuery, EditPost };

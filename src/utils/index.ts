@@ -10,8 +10,16 @@ import {
   AddCohort,
   AddPostQuery,
   AddPostRequest,
+  EditPost,
 } from './types';
-import { loginSchema, addUserSchema, addCohortSchema, validateAddPostSchema } from './validation';
+import {
+  loginSchema,
+  addUserSchema,
+  addCohortSchema,
+  validateAddPostSchema,
+  editPostSchema,
+  deletePostSchema,
+} from './validation';
 
 export {
   signToken,
@@ -22,9 +30,12 @@ export {
   RoleType,
   JwtPayload,
   AddCohort,
+  EditPost,
   loginSchema,
   addUserSchema,
   addCohortSchema,
+  editPostSchema,
+  deletePostSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,

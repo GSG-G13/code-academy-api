@@ -6,6 +6,9 @@ import {
   getCohortByNameQuery,
   getUserRoles,
   addPostQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 } from './query';
 
 export {
@@ -16,4 +19,7 @@ export {
   createUserRoleQuery,
   getCohortByNameQuery,
   addPostQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 };

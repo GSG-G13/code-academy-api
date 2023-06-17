@@ -1,3 +1,5 @@
 import validateAddPostSchema from './addPostSchema';
+import editPostSchema from './editPostSchema';
+import deletePostSchema from './deletePostSchema';
 
-export default validateAddPostSchema;
+export { validateAddPostSchema, editPostSchema, deletePostSchema };

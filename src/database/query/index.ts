@@ -5,7 +5,7 @@ import {
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
-import addPostQuery from './posts';
+import { addPostQuery, editPostQuery, getPostByIdQuery, deletePostQuery } from './posts';
 
 export {
   getUserByEmailQuery,
@@ -15,4 +15,7 @@ export {
   AddCohortQuery,
   getCohortByNameQuery,
   addPostQuery,
+  editPostQuery,
+  deletePostQuery,
+  getPostByIdQuery,
 };
