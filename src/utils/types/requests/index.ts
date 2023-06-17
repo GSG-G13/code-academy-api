@@ -34,7 +34,7 @@ interface AddPostRequest extends RequestWithDecoded {
     content: string;
     image?: string;
     isPublic: boolean;
-    cohortId?: string;
+    cohortId?: number;
   };
 }
 
