@@ -2,8 +2,8 @@ BEGIN;
 
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
-  ('G11', '', '2023-01-01', '2023-06-30'),
-  ('G13', '', '2023-02-01', '2023-07-31');
+  ('g11', '', '2023-01-01', '2023-06-30'),
+  ('g13', '', '2023-02-01', '2023-07-31');
 
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
