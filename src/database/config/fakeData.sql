@@ -2,8 +2,8 @@ BEGIN;
 
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
-  ('Cohort 1', '', '2023-01-01', '2023-06-30'),
-  ('Cohort 2', '', '2023-02-01', '2023-07-31');
+  ('G11', '', '2023-01-01', '2023-06-30'),
+  ('G13', '', '2023-02-01', '2023-07-31');
 
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
@@ -18,7 +18,9 @@ VALUES
   ('th', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 2, 2),
   ('for', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 1, 1),
   ('five', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 2, 2),
-  ('ce!', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 1, 1);
+  ('ce!', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 1, 1),
+   ('Nour', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 2, 2),
+  ('karam', 'https://i.pinimg.com/564x/be/38/4d/be384d8bf28019aa36ee8502c8a8534d.jpg', false, 1, 1);
   
 INSERT INTO likes (user_id, post_id)
 VALUES
