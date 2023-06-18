@@ -22,6 +22,7 @@ import {
   validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
+  getSingleCohortSchema,
 } from './validation';
 
 export {
@@ -40,6 +41,7 @@ export {
   editPostSchema,
   deletePostSchema,
   validateAddPostSchema,
+  getSingleCohortSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,
