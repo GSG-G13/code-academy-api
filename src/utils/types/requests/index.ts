@@ -57,6 +57,13 @@ interface DeletePostRequest extends RequestWithDecoded {
   };
 }
 
+interface LikeRequest extends RequestWithDecoded {
+  params : {
+    userId: string,
+    postId: string
+  }
+}
+
 export {
   SignInRequest,
   AddUserRequest,
@@ -66,4 +73,5 @@ export {
   EditPostRequest,
   DeletePostRequest,
   CohortParmRequest,
+  LikeRequest,
 };

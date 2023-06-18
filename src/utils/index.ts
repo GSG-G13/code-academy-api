@@ -13,6 +13,8 @@ import {
   AddPostRequest,
   EditPost,
   PostIdQueryArgs,
+  LikeQuery,
+  LikeRequest,
 } from './types';
 import {
   loginSchema,
@@ -21,6 +23,7 @@ import {
   validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
+  validateLikes,
 } from './validation';
 
 export {
@@ -47,4 +50,7 @@ export {
   PostIdQueryArgs,
   AddPostQuery,
   AddPostRequest,
+  validateLikes,
+  LikeQuery,
+  LikeRequest,
 };

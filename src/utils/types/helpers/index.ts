@@ -6,9 +6,9 @@ import CohortPostsQueryArgs from './CohortPostsQueryArgs';
 import PublicPostsQueryArgs from './PublicPostsQueryArgs';
 import CohortNameQueryArgs from './CohortNameQueryArgs';
 import PostIdQueryArgs from './PostIdQueryArgs';
-
 import { Decoded, Roles } from './Decoded';
 import { AddPostQuery, EditPost } from './posts';
+import LikeQuery from './likes';
 
 export {
   User,
@@ -23,4 +23,5 @@ export {
   PublicPostsQueryArgs,
   CohortNameQueryArgs,
   PostIdQueryArgs,
+  LikeQuery,
 };

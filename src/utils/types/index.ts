@@ -11,6 +11,7 @@ import {
   EditPost,
   AddPostQuery,
   PostIdQueryArgs,
+  LikeQuery,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -20,6 +21,7 @@ import {
   AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
+  LikeRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -44,4 +46,6 @@ export {
   EditPost,
   StatusCode,
   PostIdQueryArgs,
+  LikeQuery,
+  LikeRequest,
 };
