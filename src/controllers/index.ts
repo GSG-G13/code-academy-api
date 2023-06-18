@@ -1,6 +1,13 @@
 import { signInController, addUsersController, addCohortController } from './admin';
 import { clientError, serverError } from './errors';
-import { addPostController, editPostController, deletePostController } from './posts';
+import {
+  getPublicPostsController,
+  getCohortPostsController,
+  editPostController,
+  deletePostController,
+  getSinglePostController,
+  addPostController,
+} from './posts';
 
 export {
   signInController,
@@ -8,7 +15,10 @@ export {
   serverError,
   addUsersController,
   addCohortController,
+  getPublicPostsController,
+  getCohortPostsController,
   addPostController,
   editPostController,
   deletePostController,
+  getSinglePostController,
 };

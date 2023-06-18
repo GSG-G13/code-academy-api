@@ -54,7 +54,7 @@ INSERT INTO user_roles (user_id, role_id, cohort_id) VALUES (1, 1, null);
 
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
-  content TEXT NOT NULL,
+  content VARCHAR(255) NOT NULL,
   image VARCHAR(255),
   is_public Boolean NOT NULL,
   user_id int NOT NULL,

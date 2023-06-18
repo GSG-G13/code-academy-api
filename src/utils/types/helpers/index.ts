@@ -2,7 +2,25 @@ import JwtPayload from './JwtPayload';
 import User from './User';
 import RoleType from './RoleType';
 import AddCohort from './AddCohort';
+import CohortPostsQueryArgs from './CohortPostsQueryArgs';
+import PublicPostsQueryArgs from './PublicPostsQueryArgs';
+import CohortNameQueryArgs from './CohortNameQueryArgs';
+import PostIdQueryArgs from './PostIdQueryArgs';
+
 import { Decoded, Roles } from './Decoded';
 import { AddPostQuery, EditPost } from './posts';
 
-export { User, RoleType, JwtPayload, Decoded, Roles, AddCohort, AddPostQuery, EditPost };
+export {
+  User,
+  RoleType,
+  JwtPayload,
+  Decoded,
+  Roles,
+  AddCohort,
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
+  CohortNameQueryArgs,
+  EditPost,
+  PostIdQueryArgs,
+  AddPostQuery,
+};

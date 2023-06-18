@@ -8,9 +8,11 @@ import {
   RequestWithDecoded,
   Roles,
   AddCohort,
+  CohortNameQueryArgs,
   AddPostQuery,
   AddPostRequest,
   EditPost,
+  PostIdQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -40,6 +42,8 @@ export {
   Decoded,
   RequestWithDecoded,
   Roles,
+  CohortNameQueryArgs,
+  PostIdQueryArgs,
   validateAddPostSchema,
   AddPostQuery,
   AddPostRequest,

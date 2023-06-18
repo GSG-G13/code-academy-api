@@ -10,9 +10,10 @@ const addPostController = async (req: AddPostRequest, res: Response, next: NextF
 
     await validateAddPostSchema.validateAsync({ content, isPublic, cohortId });
     const { id, roles, isAdmin } = req.user;
-    if (!isAdmin
-      && (roles === undefined || !roles.some((role) => role.cohort_id === cohortId))
-      && !isPublic
+    if (
+      !isAdmin &&
+      (roles === undefined || !roles.some((role) => role.cohort_id === cohortId)) &&
+      !isPublic
     ) {
       throw new CustomError('Unauthorized', 401);
     }

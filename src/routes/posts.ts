@@ -1,10 +1,21 @@
 import express, { Router } from 'express';
-import { addPostController } from '../controllers';
+import {
+  getCohortPostsController,
+  getPublicPostsController,
+  deletePostController,
+  editPostController,
+  getSinglePostController,
+} from '../controllers';
 import checkAuth from '../middlewares';
 
 const postsRouter: Router = express.Router();
 
 postsRouter.use(checkAuth);
-postsRouter.post('/', addPostController);
+postsRouter.get('/', getPublicPostsController);
+postsRouter.get('/cohort/:cohortName', getCohortPostsController);
+postsRouter.get('/cohort/:cohortName', getCohortPostsController);
+postsRouter.get('/:id', getSinglePostController);
+postsRouter.put('/:id', editPostController);
+postsRouter.delete('/:id', deletePostController);
 
 export default postsRouter;

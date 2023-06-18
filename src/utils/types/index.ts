@@ -1,14 +1,19 @@
 import {
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
+  CohortNameQueryArgs,
   User,
   RoleType,
   JwtPayload,
   Decoded,
   Roles,
   AddCohort,
-  AddPostQuery,
   EditPost,
+  PostIdQueryArgs,
+  AddPostQuery,
 } from './helpers';
 import {
+  CohortParmRequest,
   SignInRequest,
   AddUserRequest,
   RequestWithDecoded,
@@ -29,7 +34,12 @@ export {
   DeletePostRequest,
   Roles,
   AddCohort,
+  CohortPostsQueryArgs,
+  PublicPostsQueryArgs,
+  CohortParmRequest,
+  CohortNameQueryArgs,
   AddPostQuery,
   AddPostRequest,
   EditPost,
+  PostIdQueryArgs,
 };
