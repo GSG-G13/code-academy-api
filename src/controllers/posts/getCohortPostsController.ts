@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
 import { CustomError } from '../../utils';
-import { getCohortIdByNameQuery, getCohortPostsQuery } from '../../database';
+import { getCohortIdByNameQuery, getCohortPostsQuery, getCountPostsQuery } from '../../database';
 import { CohortParmRequest } from '../../utils/types';
 
 const getCohortPostsController = async (
@@ -26,7 +26,23 @@ const getCohortPostsController = async (
       throw new CustomError('Unauthorized', 401);
     }
     const { rows: posts } = await getCohortPostsQuery({ id, offset });
-    res.status(200).json({ message: 'Success', data: posts });
+    const { rows: countPosts } = await getCountPostsQuery();
+    const allPostsCount = countPosts[0].count;
+
+    const pagination = {
+      allPostsCount,
+      currentPage: Number(page || 1),
+      pages: Math.ceil(allPostsCount / 10),
+    };
+
+    res.status(201).json({
+      error: false,
+      data: {
+        message: 'Success',
+        posts,
+        pagination,
+      },
+    });
   } catch (err) {
     next(err);
   }
