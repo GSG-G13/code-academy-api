@@ -17,10 +17,10 @@ export {
   Decoded,
   Roles,
   AddCohort,
+  AddPostQuery,
+  EditPost,
   CohortPostsQueryArgs,
   PublicPostsQueryArgs,
   CohortNameQueryArgs,
-  EditPost,
   PostIdQueryArgs,
-  AddPostQuery,
 };
