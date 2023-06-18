@@ -21,6 +21,7 @@ import {
   AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
+  getSingleCohortRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -46,4 +47,5 @@ export {
   StatusCode,
   PostIdQueryArgs,
   GetSingleCohortQueryArgs,
+  getSingleCohortRequest,
 };
