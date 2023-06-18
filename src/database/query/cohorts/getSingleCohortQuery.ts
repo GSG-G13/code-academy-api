@@ -4,10 +4,13 @@ import { GetSingleCohortQueryArgs } from '../../../utils';
 const getSingleCohortQuery = ({ id }: GetSingleCohortQueryArgs) => {
   const sql = {
     // eslint-disable-next-line quotes
-    text: `SELECT c.*, u.id, u.username, u.avatar FROM cohorts c
-            JOIN user_roles ur ON c.id = ur.cohort_id
-            JOIN users u ON ur.user_id = u.id
-            WHERE c.id =$1`,
+    text: `SELECT cohorts.id, cohorts.name, cohorts.thumbnail,
+    json_agg(json_build_object('id', users.id, 'username', users.username, 'avatar', users.avatar)) AS members
+    FROM cohorts
+    JOIN user_roles ON cohorts.id = user_roles.cohort_id
+    JOIN users ON user_roles.user_id = users.id
+    WHERE cohorts.id = $1
+    GROUP BY cohorts.id, cohorts.name, cohorts.thumbnail;`,
     values: [id],
   };
 
