@@ -15,6 +15,7 @@ import {
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
+import getAllCohortsQuery from './cohorts';
 
 export {
   getUserByEmailQuery,
@@ -30,4 +31,5 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  getAllCohortsQuery,
 };
