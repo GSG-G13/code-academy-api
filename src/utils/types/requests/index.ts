@@ -29,6 +29,15 @@ interface AddCohortRequest extends RequestWithDecoded {
   };
 }
 
+interface AddPostRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+    image?: string;
+    isPublic: boolean;
+    cohortId?: number;
+  };
+}
+
 interface EditPostRequest extends RequestWithDecoded {
   body: {
     content: string;
@@ -49,6 +58,7 @@ export {
   AddUserRequest,
   RequestWithDecoded,
   AddCohortRequest,
+  AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
 };

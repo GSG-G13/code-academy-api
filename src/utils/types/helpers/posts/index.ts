@@ -1,3 +1,4 @@
+import AddPostQuery from './AddPostQuery';
 import EditPost from './EditPost';
 
-export default EditPost;
+export { AddPostQuery, EditPost };

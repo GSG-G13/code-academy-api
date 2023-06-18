@@ -8,12 +8,15 @@ import {
   RequestWithDecoded,
   Roles,
   AddCohort,
+  AddPostQuery,
+  AddPostRequest,
   EditPost,
 } from './types';
 import {
   loginSchema,
   addUserSchema,
   addCohortSchema,
+  validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
 } from './validation';
@@ -37,4 +40,7 @@ export {
   Decoded,
   RequestWithDecoded,
   Roles,
+  validateAddPostSchema,
+  AddPostQuery,
+  AddPostRequest,
 };
