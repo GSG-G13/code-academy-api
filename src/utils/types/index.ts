@@ -11,6 +11,7 @@ import {
   EditPost,
   AddPostQuery,
   PostIdQueryArgs,
+  GetSingleCohortQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -44,4 +45,5 @@ export {
   EditPost,
   StatusCode,
   PostIdQueryArgs,
+  GetSingleCohortQueryArgs,
 };
