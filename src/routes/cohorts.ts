@@ -2,8 +2,8 @@ import express, { Router } from 'express';
 import { getSingleCohortController } from '../controllers';
 import checkAuth from '../middlewares';
 
-const cohortRouter: Router = express.Router();
-cohortRouter.use(checkAuth);
-cohortRouter.get('/:id', getSingleCohortController);
+const userCohortsRouter: Router = express.Router();
+userCohortsRouter.use(checkAuth);
+userCohortsRouter.get('/:id', getSingleCohortController);
 
-export default cohortRouter;
+export default userCohortsRouter;
