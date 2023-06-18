@@ -12,6 +12,9 @@ import {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  addLikeQuery,
+  unlikeLikeQuery,
+  checkQuery,
 } from './query';
 
 export {
@@ -28,4 +31,7 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  addLikeQuery,
+  unlikeLikeQuery,
+  checkQuery,
 };

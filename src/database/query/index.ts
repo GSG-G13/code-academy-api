@@ -8,6 +8,7 @@ import {
   deletePostQuery,
   addPostQuery,
 } from './posts';
+import { addLikeQuery, unlikeLikeQuery, checkQuery } from './likes';
 
 import {
   createUserQuery,
@@ -30,4 +31,7 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  addLikeQuery,
+  unlikeLikeQuery,
+  checkQuery,
 };
