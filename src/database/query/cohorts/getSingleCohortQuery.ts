@@ -1,8 +1,5 @@
 import connection from '../../config/connection';
-
-interface GetSingleCohortQueryArgs {
-  id: number;
-}
+import { GetSingleCohortQueryArgs } from '../../../utils/types';
 
 const getSingleCohortQuery = ({ id }: GetSingleCohortQueryArgs) => {
   const sql = {
