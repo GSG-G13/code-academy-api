@@ -12,6 +12,7 @@ import {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  getCountPostsQuery,
 } from './query';
 
 export {
@@ -28,4 +29,5 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  getCountPostsQuery,
 };
