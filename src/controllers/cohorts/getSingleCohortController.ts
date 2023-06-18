@@ -1,7 +1,6 @@
 import { Response, NextFunction } from 'express';
 import { getSingleCohortQuery } from '../../database';
-import { CustomError, RequestWithDecoded } from '../../utils';
-import { getSingleCohortSchema } from '../../utils';
+import { CustomError, RequestWithDecoded, getSingleCohortSchema } from '../../utils';
 
 const getSingleCohortController = async (
   req: RequestWithDecoded,
@@ -14,10 +13,9 @@ const getSingleCohortController = async (
     const { rows, rowCount } = await getSingleCohortQuery({ id: +id });
 
     if (!rowCount) throw new CustomError('Cohort not found', 404);
-
     res.status(200).json({
       data: {
-        message: 'Cohort retrieved successfully',
+        message: 'Cohort  return successfully',
         cohort: { ...rows[0] },
       },
     });
