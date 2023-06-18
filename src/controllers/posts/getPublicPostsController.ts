@@ -1,5 +1,5 @@
 import { NextFunction, Response } from 'express';
-import { getPublicPostsQuery } from '../../database/query';
+import { getCountPostsQuery, getPublicPostsQuery } from '../../database/query';
 import { RequestWithDecoded } from '../../utils';
 
 const getPublicPostsController = async (
@@ -12,12 +12,21 @@ const getPublicPostsController = async (
 
     const offset = (Number(page || 1) - 1) * 10;
     const { rows: posts } = await getPublicPostsQuery({ offset });
+    const { rows: countPosts } = await getCountPostsQuery();
+    const allPostsCount = countPosts[0].count;
+
+    const pagination = {
+      allPostsCount,
+      currentPage: Number(page || 1),
+      pages: Math.ceil(allPostsCount / 10),
+    };
 
     res.status(201).json({
-      error: 'false',
+      error: false,
       data: {
         message: 'Success',
         posts,
+        pagination,
       },
     });
   } catch (err) {
