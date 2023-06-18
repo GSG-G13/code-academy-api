@@ -1,4 +1,5 @@
 import { getUserByEmailQuery, getUserRoles } from './auth';
+import { getAllCohortsQuery, getSingleCohortQuery } from './cohorts';
 import {
   getPublicPostsQuery,
   getCohortPostsQuery,
@@ -15,7 +16,6 @@ import {
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
-import getAllCohortsQuery from './cohorts';
 
 export {
   getUserByEmailQuery,
@@ -31,5 +31,6 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  getSingleCohortQuery,
   getAllCohortsQuery,
 };

@@ -56,6 +56,11 @@ interface DeletePostRequest extends RequestWithDecoded {
     id: string;
   };
 }
+interface getSingleCohortRequest extends RequestWithDecoded {
+  params: {
+    id: string;
+  };
+}
 
 export {
   SignInRequest,
@@ -66,4 +71,5 @@ export {
   EditPostRequest,
   DeletePostRequest,
   CohortParmRequest,
+  getSingleCohortRequest,
 };

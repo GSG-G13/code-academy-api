@@ -13,6 +13,7 @@ import {
   AddPostRequest,
   EditPost,
   PostIdQueryArgs,
+  GetSingleCohortQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -21,6 +22,7 @@ import {
   validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
+  getSingleCohortSchema,
 } from './validation';
 
 export {
@@ -39,6 +41,7 @@ export {
   editPostSchema,
   deletePostSchema,
   validateAddPostSchema,
+  getSingleCohortSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -47,4 +50,5 @@ export {
   PostIdQueryArgs,
   AddPostQuery,
   AddPostRequest,
+  GetSingleCohortQueryArgs,
 };

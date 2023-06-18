@@ -1,5 +1,5 @@
 import { loginSchema, addUserSchema } from './auth';
-import addCohortSchema from './cohorts';
+import { addCohortSchema, getSingleCohortSchema } from './cohorts';
 import { validateAddPostSchema, editPostSchema, deletePostSchema } from './posts';
 
 export {
@@ -9,4 +9,5 @@ export {
   validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
+  getSingleCohortSchema,
 };
