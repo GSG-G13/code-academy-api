@@ -5,6 +5,7 @@ import {
   getCohortPostsController,
   editPostController,
   deletePostController,
+  getSinglePostController,
 } from './posts';
 
 export {
@@ -17,4 +18,5 @@ export {
   getCohortPostsController,
   editPostController,
   deletePostController,
+  getSinglePostController,
 };
