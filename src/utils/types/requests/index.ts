@@ -29,6 +29,10 @@ interface AddCohortRequest extends RequestWithDecoded {
   };
 }
 
+interface CohortParmRequest extends RequestWithDecoded {
+  params: { cohortName: string };
+}
+
 interface AddPostRequest extends RequestWithDecoded {
   body: {
     content: string;
@@ -61,4 +65,5 @@ export {
   AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
+  CohortParmRequest,
 };

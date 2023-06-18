@@ -13,7 +13,7 @@ const addCohortController = async (req: AddCohortRequest, res: Response, next: N
     if (rows.length) {
       throw new CustomError('Cohort name is already exists', 400);
     }
-    await AddCohortQuery({ name, thumbnail, startDate, endDate });
+    await AddCohortQuery({ name: name.toLowerCase(), thumbnail, startDate, endDate });
     res.status(200).json({
       error: false,
       data: {

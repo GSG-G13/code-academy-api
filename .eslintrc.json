@@ -23,7 +23,8 @@
     "implicit-arrow-linebreak": "off",
     "linebreak-style": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"]
+    "@typescript-eslint/no-shadow": ["error"],
+    "operator-linebreak": "off"
   },
   "overrides": [
     {
