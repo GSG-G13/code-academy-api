@@ -11,14 +11,13 @@ const getPublicPostsController = async (
     const { page } = req.query;
 
     const offset = (Number(page || 1) - 1) * 10;
-    const allData = await getPublicPostsQuery({ offset });
-    const Posts = allData.rows;
+    const { rows: posts } = await getPublicPostsQuery({ offset });
 
     res.status(201).json({
       error: 'false',
       data: {
         message: 'Success',
-        posts: Posts,
+        posts,
       },
     });
   } catch (err) {
