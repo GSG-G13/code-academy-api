@@ -16,11 +16,13 @@ const getPostByIdController = async (
     if (!posts.length) throw new CustomError('NOT FOUND', 400);
     if (
       !(
-        (!roles || isAdmin === true)
-        || (posts[0].is_public === true)
-        || (posts[0].is_public === false
-        && roles.some((role) => role.cohort_id === posts[0].cohort_id))
-      )) {
+        !roles ||
+        isAdmin === true ||
+        posts[0].is_public === true ||
+        (posts[0].is_public === false &&
+          roles.some((role) => role.cohort_id === posts[0].cohort_id))
+      )
+    ) {
       throw new CustomError('NOT FOUND', 404);
     }
     res.status(200).json({ error: false, data: { message: 'Success', post: posts } });

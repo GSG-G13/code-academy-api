@@ -4,7 +4,8 @@ import {
   getPublicPostsController,
   deletePostController,
   editPostController,
-  getSinglePostController, addPostController,
+  getSinglePostController,
+  addPostController,
 } from '../controllers';
 import checkAuth from '../middlewares';
 
@@ -15,6 +16,8 @@ postsRouter.get('/', getPublicPostsController);
 postsRouter.get('/cohort/:cohortName', getCohortPostsController);
 postsRouter.get('/:id', getSinglePostController);
 postsRouter.post('/', addPostController);
+postsRouter.get('/cohort/:cohortName', getCohortPostsController);
+postsRouter.get('/:id', getSinglePostController);
 postsRouter.put('/:id', editPostController);
 postsRouter.delete('/:id', deletePostController);
 
