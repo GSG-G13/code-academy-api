@@ -12,9 +12,7 @@ const validateAddPostSchema = Joi.object({
   }),
   cohortId: Joi.number().when('isPublic', {
     is: false,
-    then: Joi.number()
-      .required()
-      .messages({ 'any.required': 'Cohort ID is required' }),
+    then: Joi.number().required().messages({ 'any.required': 'Cohort ID is required' }),
     otherwise: Joi.number()
       .allow(null)
       .messages({ 'number.base': 'Cohort ID must be a number or null.' }),

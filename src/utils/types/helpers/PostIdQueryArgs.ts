@@ -1,5 +1,5 @@
 interface PostIdQueryArgs {
-  postId: number;
+  id: number;
 }
 
 export default PostIdQueryArgs;

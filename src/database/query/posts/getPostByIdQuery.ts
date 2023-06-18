@@ -1,10 +1,10 @@
 import { PostIdQueryArgs } from '../../../utils';
 import connection from '../../config/connection';
 
-const getPostByIdQuery = ({ postId }: PostIdQueryArgs) => {
+const getPostByIdQuery = ({ id }: PostIdQueryArgs) => {
   const sql = {
     text: 'SELECT * FROM posts WHERE id = $1',
-    values: [postId],
+    values: [id],
   };
   return connection.query(sql);
 };
