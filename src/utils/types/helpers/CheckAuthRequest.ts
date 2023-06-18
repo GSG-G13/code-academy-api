@@ -1,9 +1,7 @@
+import { Decoded } from './Decoded';
+
 interface RequestData extends Request {
-  user?: {
-    id?: number;
-    isAdmin: boolean;
-    role: [{ cohortId: number }, { roleId: number }];
-  };
+  user?: Decoded;
 }
 
 export default RequestData;
