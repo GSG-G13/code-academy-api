@@ -6,6 +6,7 @@ import {
   editPostQuery,
   getPostByIdQuery,
   deletePostQuery,
+  addPostQuery,
 } from './posts';
 
 import {
@@ -25,6 +26,7 @@ export {
   getPublicPostsQuery,
   getCohortPostsQuery,
   getCohortIdByNameQuery,
+  addPostQuery,
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,

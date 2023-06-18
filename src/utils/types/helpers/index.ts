@@ -8,7 +8,7 @@ import CohortNameQueryArgs from './CohortNameQueryArgs';
 import PostIdQueryArgs from './PostIdQueryArgs';
 
 import { Decoded, Roles } from './Decoded';
-import EditPost from './posts';
+import { AddPostQuery, EditPost } from './posts';
 
 export {
   User,
@@ -17,9 +17,10 @@ export {
   Decoded,
   Roles,
   AddCohort,
+  AddPostQuery,
+  EditPost,
   CohortPostsQueryArgs,
   PublicPostsQueryArgs,
   CohortNameQueryArgs,
-  EditPost,
   PostIdQueryArgs,
 };

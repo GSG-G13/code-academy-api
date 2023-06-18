@@ -9,6 +9,7 @@ import {
   Roles,
   AddCohort,
   EditPost,
+  AddPostQuery,
   PostIdQueryArgs,
 } from './helpers';
 import {
@@ -16,6 +17,7 @@ import {
   SignInRequest,
   AddUserRequest,
   RequestWithDecoded,
+  AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
 } from './requests';
@@ -36,6 +38,8 @@ export {
   PublicPostsQueryArgs,
   CohortParmRequest,
   CohortNameQueryArgs,
+  AddPostQuery,
+  AddPostRequest,
   EditPost,
   PostIdQueryArgs,
 };
