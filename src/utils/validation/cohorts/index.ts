@@ -1,3 +1,4 @@
 import addCohortSchema from './addCohortSchema';
+import getSingleCohortSchema from './getSingleCohortSchema';
 
-export default addCohortSchema;
+export { addCohortSchema, getSingleCohortSchema };

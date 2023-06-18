@@ -9,7 +9,7 @@ const addCohortController = async (req: AddCohortRequest, res: Response, next: N
 
     const { name, thumbnail, startDate, endDate } = req.body;
     await addCohortSchema.validateAsync({ name, startDate, endDate }, { abortEarly: false });
-    const { rows } = await getCohortByNameQuery({ name });
+    const { rows } = await getCohortByNameQuery({ name: name.toLowerCase() });
     if (rows.length) {
       throw new CustomError('Cohort name is already exists', 400);
     }
