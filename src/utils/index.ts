@@ -9,6 +9,8 @@ import {
   Roles,
   AddCohort,
   CohortNameQueryArgs,
+  AddPostQuery,
+  AddPostRequest,
   EditPost,
   PostIdQueryArgs,
 } from './types';
@@ -16,6 +18,7 @@ import {
   loginSchema,
   addUserSchema,
   addCohortSchema,
+  validateAddPostSchema,
   editPostSchema,
   deletePostSchema,
 } from './validation';
@@ -41,4 +44,7 @@ export {
   Roles,
   CohortNameQueryArgs,
   PostIdQueryArgs,
+  validateAddPostSchema,
+  AddPostQuery,
+  AddPostRequest,
 };

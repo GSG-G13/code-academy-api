@@ -1,5 +1,4 @@
 interface Roles {
-  cohort_name: string;
   cohort_id: number;
   role_id: number;
 }
