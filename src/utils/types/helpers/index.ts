@@ -6,6 +6,7 @@ import CohortPostsQueryArgs from './CohortPostsQueryArgs';
 import PublicPostsQueryArgs from './PublicPostsQueryArgs';
 import CohortNameQueryArgs from './CohortNameQueryArgs';
 import PostIdQueryArgs from './PostIdQueryArgs';
+import GetSingleCohortQueryArgs from './GetSingleCohortQuery';
 
 import { Decoded, Roles } from './Decoded';
 import { AddPostQuery, EditPost } from './posts';
@@ -23,4 +24,5 @@ export {
   PublicPostsQueryArgs,
   CohortNameQueryArgs,
   PostIdQueryArgs,
+  GetSingleCohortQueryArgs,
 };
