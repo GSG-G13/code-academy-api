@@ -10,7 +10,7 @@ const deletePostController = async (req: DeletePostRequest, res: Response, next:
     const { id: userId } = req.user;
 
     await deletePostSchema.validateAsync({ id });
-    const { rows, rowCount } = await getPostByIdQuery({ postId: +id });
+    const { rows, rowCount } = await getPostByIdQuery({ id: +id });
 
     if (!rowCount) throw new CustomError('Post not found', 404);
     if (rows[0].user_id !== userId) throw new CustomError('Unauthorized', 401);

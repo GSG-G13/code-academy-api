@@ -8,11 +8,11 @@ const getPostByIdController = async (
   next: NextFunction,
 ) => {
   try {
-    const { postId } = req.params;
+    const { id } = req.params;
     const isAdmin = req.user?.isAdmin;
     const roles = req.user?.roles;
 
-    const { rows: posts } = await getPostByIdQuery({ postId: +postId });
+    const { rows: posts } = await getPostByIdQuery({ id: +id });
     if (!posts.length) throw new CustomError('NOT FOUND', 400);
     if (
       !(
