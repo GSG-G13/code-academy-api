@@ -14,7 +14,6 @@ const getCohortPostsController = async (
     const { cohortName } = req.params;
     const roles = req.user?.roles;
 
-    // eslint-disable-next-line max-len
     const { rows, rowCount } = await getCohortIdByNameQuery({
       cohortName: cohortName.toLowerCase(),
     });

@@ -6,7 +6,7 @@ import { EditPostRequest } from '../../utils/types';
 const editPostController = async (req: EditPostRequest, res: Response, next: NextFunction) => {
   try {
     const { id } = req.params;
-    const { rows } = await getPostByIdQuery({ postId: +id });
+    const { rows } = await getPostByIdQuery({ id: +id });
     if (!rows.length) {
       throw new CustomError('Post is not exist', 400);
     }
