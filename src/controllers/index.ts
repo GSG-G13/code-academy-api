@@ -8,6 +8,7 @@ import {
   getSinglePostController,
   addPostController,
 } from './posts';
+import likeController from './likes';
 
 export {
   signInController,
@@ -21,4 +22,5 @@ export {
   editPostController,
   deletePostController,
   getSinglePostController,
+  likeController,
 };
