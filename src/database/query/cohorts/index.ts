@@ -1,3 +1,4 @@
 import getSingleCohortQuery from './getSingleCohortQuery';
+import getAllCohortsQuery from './getAllCohortsQuery';
 
-export default getSingleCohortQuery;
+export { getAllCohortsQuery, getSingleCohortQuery };

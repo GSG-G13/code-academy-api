@@ -1,3 +1,4 @@
 import getSingleCohortController from './getSingleCohortController';
+import getAllCohortsController from './getAllCohortsController';
 
-export default getSingleCohortController;
+export { getSingleCohortController, getAllCohortsController };
