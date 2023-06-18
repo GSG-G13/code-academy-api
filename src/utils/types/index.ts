@@ -21,6 +21,7 @@ import {
   EditPostRequest,
   DeletePostRequest,
 } from './requests';
+import StatusCode from './enums';
 
 export {
   User,
@@ -41,5 +42,6 @@ export {
   AddPostQuery,
   AddPostRequest,
   EditPost,
+  StatusCode,
   PostIdQueryArgs,
 };
