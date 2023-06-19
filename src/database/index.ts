@@ -15,6 +15,9 @@ import {
   addLikeQuery,
   unlikeLikeQuery,
   checkQuery,
+  getCountPostsQuery,
+  getSingleCohortQuery,
+  getAllCohortsQuery,
 } from './query';
 
 export {
@@ -34,4 +37,7 @@ export {
   addLikeQuery,
   unlikeLikeQuery,
   checkQuery,
+  getCountPostsQuery,
+  getSingleCohortQuery,
+  getAllCohortsQuery,
 };

@@ -56,6 +56,11 @@ interface DeletePostRequest extends RequestWithDecoded {
     id: string;
   };
 }
+interface getSingleCohortRequest extends RequestWithDecoded {
+  params: {
+    id: string;
+  };
+}
 
 interface LikeRequest extends RequestWithDecoded {
   params : {
@@ -74,4 +79,5 @@ export {
   DeletePostRequest,
   CohortParmRequest,
   LikeRequest,
+  getSingleCohortRequest,
 };
