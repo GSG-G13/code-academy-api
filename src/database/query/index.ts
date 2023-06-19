@@ -8,6 +8,7 @@ import {
   getPostByIdQuery,
   deletePostQuery,
   addPostQuery,
+  getCountPostsQuery,
 } from './posts';
 
 import {
@@ -31,6 +32,7 @@ export {
   editPostQuery,
   deletePostQuery,
   getPostByIdQuery,
+  getCountPostsQuery,
   getSingleCohortQuery,
   getAllCohortsQuery,
 };
