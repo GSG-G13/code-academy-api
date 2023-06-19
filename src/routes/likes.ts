@@ -5,6 +5,6 @@ import checkAuth from '../middlewares';
 const likesRouter: Router = express.Router();
 
 likesRouter.use(checkAuth);
-likesRouter.post('/:postId', likeController);
+likesRouter.post('/:id', likeController);
 
 export default likesRouter;

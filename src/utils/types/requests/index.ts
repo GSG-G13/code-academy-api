@@ -64,8 +64,7 @@ interface getSingleCohortRequest extends RequestWithDecoded {
 
 interface LikeRequest extends RequestWithDecoded {
   params : {
-    userId: string,
-    postId: string
+    id: string,
   }
 }
 

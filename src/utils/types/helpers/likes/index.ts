@@ -1,5 +1,5 @@
 interface LikeQuery {
-  userId: number,
-  postId: number
+  id: number,
+  userId: number
 }
 export default LikeQuery;
