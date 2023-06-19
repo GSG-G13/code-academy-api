@@ -11,6 +11,7 @@ import {
   EditPost,
   AddPostQuery,
   PostIdQueryArgs,
+  LikeQuery,
   GetSingleCohortQueryArgs,
 } from './helpers';
 import {
@@ -21,6 +22,7 @@ import {
   AddPostRequest,
   EditPostRequest,
   DeletePostRequest,
+  LikeRequest,
   getSingleCohortRequest,
 } from './requests';
 import StatusCode from './enums';
@@ -46,6 +48,8 @@ export {
   EditPost,
   StatusCode,
   PostIdQueryArgs,
+  LikeQuery,
+  LikeRequest,
   GetSingleCohortQueryArgs,
   getSingleCohortRequest,
 };

@@ -62,6 +62,12 @@ interface getSingleCohortRequest extends RequestWithDecoded {
   };
 }
 
+interface LikeRequest extends RequestWithDecoded {
+  params : {
+    id: string,
+  }
+}
+
 export {
   SignInRequest,
   AddUserRequest,
@@ -71,5 +77,6 @@ export {
   EditPostRequest,
   DeletePostRequest,
   CohortParmRequest,
+  LikeRequest,
   getSingleCohortRequest,
 };
