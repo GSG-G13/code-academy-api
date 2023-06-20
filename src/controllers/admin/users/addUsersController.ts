@@ -3,11 +3,10 @@ import { generateUsername, generatePassword, hashPassword } from '../../../utils
 import { CustomError, addUserSchema } from '../../../utils';
 import createUserQuery from '../../../database/query/admin/createUserQuery';
 import createUserRoleQuery from '../../../database/query/admin/createUserRoleQuery';
-import { getUserByEmailQuery } from '../../../database';
+import { getCohortByIdQuery, getUserByEmailQuery } from '../../../database';
 import { AddUserRequest, User } from '../../../utils/types';
 import sendEmail from '../../../utils/email/sendEmail';
 import { generateWelcomeTemplate } from '../../../utils/email';
-import getCohortByIdQuery from '../../../database/query/cohorts/getCohortByIdQuery';
 
 const addUsersController = async (req: AddUserRequest, res: Response, next: NextFunction) => {
   try {
