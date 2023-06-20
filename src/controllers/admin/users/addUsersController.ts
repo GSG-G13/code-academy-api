@@ -1,18 +1,29 @@
 import { NextFunction, Response } from 'express';
 import { generateUsername, generatePassword, hashPassword } from '../../../utils/helpers';
 import { CustomError, addUserSchema } from '../../../utils';
-import createUserQuery from '../../../database/query/admin/createUserQuery';
-import createUserRoleQuery from '../../../database/query/admin/createUserRoleQuery';
-import { getUserByEmailQuery } from '../../../database';
+import {
+  createUserQuery,
+  createUserRoleQuery,
+  getCohortByIdQuery,
+  getUserByEmailQuery,
+} from '../../../database';
 import { AddUserRequest, User } from '../../../utils/types';
-import sendEmail from '../../../utils/email/sendEmail';
-import { generateWelcomeTemplate } from '../../../utils/email';
+import { generateWelcomeTemplate, sendEmail } from '../../../utils/email';
 
 const addUsersController = async (req: AddUserRequest, res: Response, next: NextFunction) => {
   try {
     if (!req.user?.isAdmin) throw new CustomError('Unauthorized', 401);
 
     const { users, cohortId, roleId } = req.body;
+
+    const { rows: isExist } = await getCohortByIdQuery({ cohortId });
+    if (!isExist.length) {
+      throw new CustomError('Cohort NOT EXIST', 404);
+    }
+
+    if (roleId < 1 || roleId > 4) {
+      throw new CustomError('roleId NOT EXIST', 404);
+    }
 
     const filteredUsers = users.filter((user, index, array) => {
       const userIndex = array.findIndex((u) => u.email === user.email);

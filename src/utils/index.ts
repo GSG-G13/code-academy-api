@@ -16,6 +16,7 @@ import {
   LikeQuery,
   LikeRequest,
   GetSingleCohortQueryArgs,
+  CohortIdQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -57,4 +58,5 @@ export {
   LikeQuery,
   LikeRequest,
   GetSingleCohortQueryArgs,
+  CohortIdQueryArgs,
 };

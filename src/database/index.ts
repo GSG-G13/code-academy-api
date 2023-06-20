@@ -18,6 +18,7 @@ import {
   getCountPostsQuery,
   getSingleCohortQuery,
   getAllCohortsQuery,
+  getCohortByIdQuery,
 } from './query';
 
 export {
@@ -40,4 +41,5 @@ export {
   getCountPostsQuery,
   getSingleCohortQuery,
   getAllCohortsQuery,
+  getCohortByIdQuery,
 };
