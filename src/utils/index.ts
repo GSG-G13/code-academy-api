@@ -14,6 +14,7 @@ import {
   EditPost,
   PostIdQueryArgs,
   GetSingleCohortQueryArgs,
+  CohortIdQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -51,4 +52,5 @@ export {
   AddPostQuery,
   AddPostRequest,
   GetSingleCohortQueryArgs,
+  CohortIdQueryArgs,
 };

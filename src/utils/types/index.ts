@@ -12,6 +12,7 @@ import {
   AddPostQuery,
   PostIdQueryArgs,
   GetSingleCohortQueryArgs,
+  CohortIdQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -48,4 +49,5 @@ export {
   PostIdQueryArgs,
   GetSingleCohortQueryArgs,
   getSingleCohortRequest,
+  CohortIdQueryArgs,
 };
