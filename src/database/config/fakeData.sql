@@ -3,13 +3,15 @@ BEGIN;
 INSERT INTO cohorts (name, thumbnail, start_date, end_date)
 VALUES
   ('g11', '', '2023-01-01', '2023-06-30'),
-  ('g13', '', '2023-02-01', '2023-07-31');
+  ('g12', '', '2023-02-01', '2023-07-31'),
+  ('g13', '', '2023-02-01', '2023-07-31'),
+  ('g14', '', '2023-02-01', '2023-07-31');
 
-INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
+INSERT INTO users (full_name, username, email, github, linkedin, password, avatar, date_of_birth, career_status_id, gender, is_active)
 VALUES
-  ('John Doe', 'johndoe', 'johndoe@example.com', 'password123', '', true, 1),
-  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'password456', '', true, 2);
-
+  ('John Doe', 'johndoe', 'johndoe@example.com', 'johndoe', 'johndoe', 'password123', 'avatar.jpg', '1990-01-01', 1, 'Male', true),
+  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'janesmith', 'janesmith', 'password456', 'avatar.jpg', '1992-05-15', NULL, 'Female', true),
+  ('Mike Johnson', 'mikejohnson', 'mikejohnson@example.com', 'mikejohnson', 'mikejohnson', 'password789', 'avatar.jpg', '1988-11-30', 2, 'Male', true);
 
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
 VALUES
@@ -41,5 +43,15 @@ INSERT INTO saved_posts (user_id, post_id)
 VALUES
   (1, 1),
   (2, 2);
+
+INSERT INTO user_roles (user_id, role_id, cohort_id)
+VALUES
+  (1, 1, 1),
+  (2, 3, 1),
+  (3, 4, 1),
+  (3, 2, 2),
+  (3, 2, 3),
+  (3, 2, 4);
+ 
 
 COMMIT;

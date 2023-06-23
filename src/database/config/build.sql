@@ -15,10 +15,14 @@ CREATE TABLE users (
   full_name VARCHAR(255) NOT NULL,
   username VARCHAR(200) NOT NULL UNIQUE,
   email VARCHAR(255) NOT NULL UNIQUE,
+  github VARCHAR(255),
+  linkedin VARCHAR(255),
   password VARCHAR(255) NOT NULL,
   avatar TEXT,
+  date_of_birth DATE,
+  career_status_id int DEFAULT 1,
+  gender VARCHAR(10),
   is_active Boolean,
-  career_status_id int,
   FOREIGN KEY (career_status_id) REFERENCES career_status(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
