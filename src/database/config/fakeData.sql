@@ -10,7 +10,7 @@ VALUES
 INSERT INTO users (full_name, username, email, github, linkedin, password, avatar, date_of_birth, career_status_id, gender, is_active)
 VALUES
   ('John Doe', 'johndoe', 'johndoe@example.com', 'johndoe', 'johndoe', 'password123', 'avatar.jpg', '1990-01-01', 1, 'Male', true),
-  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'janesmith', 'janesmith', 'password456', 'avatar.jpg', '1992-05-15', NULL, 'Female', true),
+  ('Jane Smith', 'janesmith', 'janesmith@example.com', 'janesmith', 'janesmith', 'password456', 'avatar.jpg', '1992-05-15', 1, 'Female', true),
   ('Mike Johnson', 'mikejohnson', 'mikejohnson@example.com', 'mikejohnson', 'mikejohnson', 'password789', 'avatar.jpg', '1988-11-30', 2, 'Male', true);
 
 INSERT INTO posts (content, image, is_public, user_id, cohort_id)
