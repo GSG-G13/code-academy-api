@@ -1,18 +1,20 @@
 import { Response, NextFunction } from 'express';
 import { RequestWithDecoded } from '../../utils';
-import { getMembersQuery } from '../../database';
+import { getCountMembersQuery, getMembersQuery } from '../../database';
 
 const getMembersController = async (req: RequestWithDecoded, res: Response, next: NextFunction) => {
   try {
     const { page } = req.query;
 
-    const offset = (Number(page || 1) - 1) * 10;
+    const offset = (Number(page || 1) - 1) * 12;
     const { rows: members } = await getMembersQuery({ offset });
-    const countOfMembers = members.length;
+    const { rows: countOfMembers } = await getCountMembersQuery();
+    const allMembersCount = countOfMembers[0].count;
+
     const pagination = {
-      countOfMembers,
+      allMembersCount: Number(allMembersCount),
       currentPage: Number(page || 1),
-      pages: Math.ceil(countOfMembers / 10),
+      pages: Math.ceil(allMembersCount.length / 12),
     };
 
     res.status(200).json({
