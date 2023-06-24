@@ -10,6 +10,7 @@ import {
   addPostController,
 } from './posts';
 import getMembersController from './users';
+import likeController from './likes';
 
 export {
   signInController,
@@ -23,6 +24,7 @@ export {
   editPostController,
   deletePostController,
   getSinglePostController,
+  likeController,
   getSingleCohortController,
   getAllCohortsController,
   getMembersController,
