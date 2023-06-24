@@ -5,15 +5,15 @@ const getMembersQuery = ({ offset }: PublicPostsQueryArgs) => {
   const sql = {
     text: `
     SELECT
-      users.id AS "userid",
-      users.full_name AS "fullname",
+      users.id AS "userId",
+      users.full_name AS "fullName",
       users.avatar,
       users.email AS "gmail",
       users.linkedin,
       users.github,
       cohorts.name AS "cohort",
       ARRAY_AGG(DISTINCT user_roles.role_id) AS "roles",
-      ARRAY_AGG(DISTINCT career_status.name) AS "careerstate"
+      career_status.name AS "careerState"
     FROM
       users
     JOIN
@@ -26,7 +26,13 @@ const getMembersQuery = ({ offset }: PublicPostsQueryArgs) => {
       user_roles.role_id > 1
     GROUP BY
       users.id,
-      cohorts.name
+      users.full_name,
+      users.avatar,
+      users.email,
+      users.linkedin,
+      users.github,
+      cohorts.name,
+      career_status.name
     OFFSET $1
     LIMIT 12;
     `,
