@@ -1,3 +1,4 @@
 import getMembersQuery from './getMembersQuery';
+import getCountMembersQuery from './getCountMembersQuery';
 
-export default getMembersQuery;
+export { getMembersQuery, getCountMembersQuery };
