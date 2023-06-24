@@ -1,5 +1,5 @@
 import addUsersController from './users';
-import signInController from './auth';
 import addCohortController from './cohorts';
+import { signInController, logoutController } from './auth';
 
-export { signInController, addUsersController, addCohortController };
+export { signInController, addUsersController, addCohortController, logoutController };
