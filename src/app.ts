@@ -11,12 +11,17 @@ app.set('port', PORT || 3000);
 
 app.disable('x-powered-by');
 
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  credentials: true,
+};
+
 app.use([
   express.json(),
   express.urlencoded({ extended: false }),
   cookieParser(),
   compression(),
-  cors(),
+  cors(corsOptions),
 ]);
 
 app.use('/api/v1/', router);
