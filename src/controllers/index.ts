@@ -1,4 +1,9 @@
-import { signInController, addUsersController, addCohortController } from './admin';
+import {
+  signInController,
+  addUsersController,
+  addCohortController,
+  logoutController,
+} from './admin';
 import { clientError, serverError } from './errors';
 import { getSingleCohortController, getAllCohortsController } from './cohorts';
 import {
@@ -28,4 +33,5 @@ export {
   getSingleCohortController,
   getAllCohortsController,
   getMembersController,
+  logoutController,
 };

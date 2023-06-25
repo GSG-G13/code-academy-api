@@ -1,3 +1,4 @@
 import signInController from './signInController';
+import logoutController from './logoutController';
 
-export default signInController;
+export { signInController, logoutController };
