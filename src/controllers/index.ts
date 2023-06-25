@@ -9,6 +9,7 @@ import {
   getSinglePostController,
   addPostController,
 } from './posts';
+import getMembersController from './users';
 import likeController from './likes';
 
 export {
@@ -26,4 +27,5 @@ export {
   likeController,
   getSingleCohortController,
   getAllCohortsController,
+  getMembersController,
 };
