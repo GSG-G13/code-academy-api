@@ -32,7 +32,7 @@ const getCohortPostsController = async (
     const pagination = {
       allPostsCount,
       currentPage: Number(page || 1),
-      pages: Math.ceil(allPostsCount / 10),
+      pages: Math.ceil(allPostsCount / 15),
     };
 
     res.status(201).json({

@@ -14,7 +14,7 @@ const getMembersController = async (req: RequestWithDecoded, res: Response, next
     const pagination = {
       allMembersCount: Number(allMembersCount),
       currentPage: Number(page || 1),
-      pages: Math.ceil(allMembersCount.length / 12),
+      pages: Math.ceil(allMembersCount.length / 15),
     };
 
     res.status(200).json({
