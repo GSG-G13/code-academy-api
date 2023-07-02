@@ -28,6 +28,7 @@ import {
   deletePostSchema,
   validateLikes,
   getSingleCohortSchema,
+  validateGetSingleMember,
 } from './validation';
 
 export {
@@ -61,4 +62,5 @@ export {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   MemberIdQueryArgs,
+  validateGetSingleMember,
 };
