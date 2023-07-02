@@ -10,11 +10,10 @@ const getMembersController = async (req: RequestWithDecoded, res: Response, next
     const { rows: members } = await getMembersQuery({ offset });
     const { rows: countOfMembers } = await getCountMembersQuery();
     const allMembersCount = countOfMembers[0].count;
-
     const pagination = {
       allMembersCount: Number(allMembersCount),
       currentPage: Number(page || 1),
-      pages: Math.ceil(allMembersCount.length / 12),
+      pages: Math.ceil(allMembersCount / 12),
     };
 
     res.status(200).json({
