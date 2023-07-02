@@ -30,4 +30,5 @@ const getAllCohortsController = async (
     next(err);
   }
 };
+
 export default getAllCohortsController;
