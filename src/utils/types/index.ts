@@ -14,6 +14,7 @@ import {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  MemberIdQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -54,4 +55,5 @@ export {
   GetSingleCohortQueryArgs,
   getSingleCohortRequest,
   CohortIdQueryArgs,
+  MemberIdQueryArgs,
 };
