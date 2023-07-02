@@ -8,6 +8,7 @@ import CohortNameQueryArgs from './CohortNameQueryArgs';
 import PostIdQueryArgs from './PostIdQueryArgs';
 import GetSingleCohortQueryArgs from './GetSingleCohortQuery';
 import CohortIdQueryArgs from './CohortIdQueryArg';
+import AllCohortsQueryArgs from './AllCohortsQueryArgs';
 
 import { Decoded, Roles } from './Decoded';
 import { AddPostQuery, EditPost } from './posts';
@@ -29,4 +30,5 @@ export {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  AllCohortsQueryArgs,
 };
