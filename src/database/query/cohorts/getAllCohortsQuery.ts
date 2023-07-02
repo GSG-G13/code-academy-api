@@ -7,7 +7,8 @@ const getAllCohortsQuery = ({ offset }: AllCohortsQueryArgs) => {
            FROM cohorts c 
            LEFT JOIN user_roles u ON c.id = u.cohort_id 
            GROUP BY c.id, c.name, c.thumbnail
-           LIMIT 15 OFFSET $2;`,
+           ORDER BY c.id
+           LIMIT 15 OFFSET $1;`,
     values: [offset],
   };
   return connection.query(sql);

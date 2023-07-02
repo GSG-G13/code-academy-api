@@ -16,7 +16,7 @@ const getAllCohortsController = async (
     const pagination = {
       allCohortsCount,
       currentPage: Number(page || 1),
-      pages: Math.ceil(allCohortsCount / 10),
+      pages: Math.ceil(allCohortsCount / 15),
     };
     res.status(200).json({
       error: false,
