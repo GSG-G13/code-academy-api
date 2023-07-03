@@ -14,7 +14,7 @@ const getCommentsController = async (
     const isAdmin = req.user?.isAdmin;
     const roles = req.user?.roles;
     const { rows: posts } = await getPostByIdQuery({ id: +postId });
-    if (!posts.length) throw new CustomError('NOT FOUND', 400);
+    if (!posts.length) throw new CustomError('NOT FOUND', 404);
     if (
       !(
         !roles ||
