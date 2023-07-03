@@ -7,4 +7,14 @@ interface CommentQuery {
 interface CommentsPostQuery {
   postId: number;
 }
-export { CommentQuery, CommentsPostQuery };
+
+interface CommentIdQuery {
+  commentId: number;
+}
+
+interface EditCommentQuery {
+  content: string;
+  commentId: number;
+}
+
+export { CommentQuery, CommentsPostQuery, CommentIdQuery, EditCommentQuery };

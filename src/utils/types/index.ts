@@ -16,6 +16,8 @@ import {
   CohortIdQueryArgs,
   CommentQuery,
   CommentsPostQuery,
+  CommentIdQuery,
+  EditCommentQuery,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -28,6 +30,7 @@ import {
   LikeRequest,
   getSingleCohortRequest,
   AddCommentRequest,
+  EditCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -60,4 +63,7 @@ export {
   AddCommentRequest,
   CommentQuery,
   CommentsPostQuery,
+  EditCommentRequest,
+  CommentIdQuery,
+  EditCommentQuery,
 };
