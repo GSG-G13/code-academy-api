@@ -18,7 +18,7 @@ import {
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
-import addCommentQuery from './comments';
+import { addCommentQuery, getCommentsQuery } from './comments';
 
 export {
   getUserByEmailQuery,
@@ -44,4 +44,5 @@ export {
   getMembersQuery,
   getCountMembersQuery,
   addCommentQuery,
+  getCommentsQuery,
 };

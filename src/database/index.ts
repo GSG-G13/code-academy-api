@@ -22,6 +22,7 @@ import {
   getMembersQuery,
   getCountMembersQuery,
   addCommentQuery,
+  getCommentsQuery,
 } from './query';
 
 export {
@@ -48,4 +49,5 @@ export {
   getMembersQuery,
   getCountMembersQuery,
   addCommentQuery,
+  getCommentsQuery,
 };
