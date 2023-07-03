@@ -15,6 +15,7 @@ import {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   CommentQuery,
+  CommentsPostQuery,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -58,4 +59,5 @@ export {
   CohortIdQueryArgs,
   AddCommentRequest,
   CommentQuery,
+  CommentsPostQuery,
 };

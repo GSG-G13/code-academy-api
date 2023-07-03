@@ -19,6 +19,7 @@ import {
   CohortIdQueryArgs,
   AddCommentRequest,
   CommentQuery,
+  CommentsPostQuery,
 } from './types';
 import {
   loginSchema,
@@ -65,4 +66,5 @@ export {
   CohortIdQueryArgs,
   AddCommentRequest,
   CommentQuery,
+  CommentsPostQuery,
 };
