@@ -23,6 +23,8 @@ import {
   getCountMembersQuery,
   addCommentQuery,
   getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
 } from './query';
 
 export {
@@ -50,4 +52,6 @@ export {
   getCountMembersQuery,
   addCommentQuery,
   getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
 };
