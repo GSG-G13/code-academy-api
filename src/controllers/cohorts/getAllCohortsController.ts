@@ -9,7 +9,7 @@ const getAllCohortsController = async (
 ) => {
   try {
     const { page } = req.query;
-    const offset = (Number(page || 1) - 1) * 10;
+    const offset = (Number(page || 1) - 1) * 15;
     const { rows: cohorts } = await getAllCohortsQuery({ offset });
     const { rows: countCohorts } = await getCountCohortsQuery();
     const allCohortsCount = countCohorts[0].count;
