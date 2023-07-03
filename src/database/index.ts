@@ -25,6 +25,7 @@ import {
   getCommentsQuery,
   getCommentByIdQuery,
   editCommentQuery,
+  deleteCommentQuery,
 } from './query';
 
 export {
@@ -54,4 +55,5 @@ export {
   getCommentsQuery,
   getCommentByIdQuery,
   editCommentQuery,
+  deleteCommentQuery,
 };
