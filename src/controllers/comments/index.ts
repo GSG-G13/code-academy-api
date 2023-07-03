@@ -1,3 +1,4 @@
-import commentController from './addCommentController';
+import addCommentController from './addCommentController';
+import getCommentsController from './getCommentsController';
 
-export default commentController;
+export { addCommentController, getCommentsController };
