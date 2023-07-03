@@ -12,6 +12,7 @@ import CohortIdQueryArgs from './CohortIdQueryArg';
 import { Decoded, Roles } from './Decoded';
 import { AddPostQuery, EditPost } from './posts';
 import LikeQuery from './likes';
+import CommentQuery from './comments';
 
 export {
   User,
@@ -29,4 +30,5 @@ export {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  CommentQuery,
 };

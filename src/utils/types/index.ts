@@ -14,6 +14,7 @@ import {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  CommentQuery,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -25,6 +26,7 @@ import {
   DeletePostRequest,
   LikeRequest,
   getSingleCohortRequest,
+  AddCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -54,4 +56,6 @@ export {
   GetSingleCohortQueryArgs,
   getSingleCohortRequest,
   CohortIdQueryArgs,
+  AddCommentRequest,
+  CommentQuery,
 };

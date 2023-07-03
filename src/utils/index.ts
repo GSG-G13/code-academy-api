@@ -17,6 +17,8 @@ import {
   LikeRequest,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  AddCommentRequest,
+  CommentQuery,
 } from './types';
 import {
   loginSchema,
@@ -27,6 +29,7 @@ import {
   deletePostSchema,
   validateLikes,
   getSingleCohortSchema,
+  AddCommentSchema,
 } from './validation';
 
 export {
@@ -46,6 +49,8 @@ export {
   deletePostSchema,
   validateAddPostSchema,
   getSingleCohortSchema,
+  AddCommentSchema,
+  validateLikes,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -54,9 +59,10 @@ export {
   PostIdQueryArgs,
   AddPostQuery,
   AddPostRequest,
-  validateLikes,
   LikeQuery,
   LikeRequest,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  AddCommentRequest,
+  CommentQuery,
 };
