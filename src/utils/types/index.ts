@@ -18,6 +18,7 @@ import {
   CommentsPostQuery,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteComment,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -31,6 +32,7 @@ import {
   getSingleCohortRequest,
   AddCommentRequest,
   EditCommentRequest,
+  DeleteCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -66,4 +68,6 @@ export {
   EditCommentRequest,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
 };

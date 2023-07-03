@@ -23,6 +23,8 @@ import {
   EditCommentRequest,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
 } from './types';
 import {
   loginSchema,
@@ -35,6 +37,7 @@ import {
   getSingleCohortSchema,
   AddCommentSchema,
   editCommentSchema,
+  deleteCommentSchema,
 } from './validation';
 
 export {
@@ -57,6 +60,7 @@ export {
   AddCommentSchema,
   validateLikes,
   editCommentSchema,
+  deleteCommentSchema,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -75,4 +79,6 @@ export {
   CommentsPostQuery,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
 };

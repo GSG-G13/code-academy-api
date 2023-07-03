@@ -67,6 +67,11 @@ interface EditCommentRequest extends RequestWithDecoded {
   };
 }
 
+interface DeleteCommentRequest extends RequestWithDecoded {
+  body: {
+    commentId: number;
+  };
+}
 interface DeletePostRequest extends RequestWithDecoded {
   params: {
     id: string;
@@ -97,4 +102,5 @@ export {
   getSingleCohortRequest,
   AddCommentRequest,
   EditCommentRequest,
+  DeleteCommentRequest,
 };
