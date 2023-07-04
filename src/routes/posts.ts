@@ -16,8 +16,6 @@ postsRouter.get('/', getPublicPostsController);
 postsRouter.get('/cohort/:cohortName', getCohortPostsController);
 postsRouter.get('/:id', getSinglePostController);
 postsRouter.post('/', addPostController);
-postsRouter.get('/cohort/:cohortName', getCohortPostsController);
-postsRouter.get('/:id', getSinglePostController);
 postsRouter.put('/:id', editPostController);
 postsRouter.delete('/:id', deletePostController);
 

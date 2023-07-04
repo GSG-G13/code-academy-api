@@ -7,6 +7,6 @@ const commentsRouter: Router = express.Router();
 commentsRouter.use(checkAuth);
 commentsRouter.get('/', getCommentsController);
 commentsRouter.post('/', addCommentController);
-commentsRouter.put('/', editCommentController);
+commentsRouter.put('/:id', editCommentController);
 
 export default commentsRouter;

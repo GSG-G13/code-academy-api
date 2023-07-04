@@ -62,8 +62,9 @@ interface EditPostRequest extends RequestWithDecoded {
 interface EditCommentRequest extends RequestWithDecoded {
   body: {
     content: string;
-    postId: number;
-    commentId: number;
+  };
+  params: {
+    id: string;
   };
 }
 

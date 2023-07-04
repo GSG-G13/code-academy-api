@@ -10,20 +10,20 @@ const editCommentController = async (
 ) => {
   try {
     if (!req.user) throw new CustomError('Unauthorized', 401);
+    const { id } = req.params;
+    const { content } = req.body;
+    await editCommentSchema.validateAsync({ content, id }, { abortEarly: false });
 
-    const { content, commentId } = req.body;
-    await editCommentSchema.validateAsync({ content, commentId }, { abortEarly: false });
-
-    const { rows: comment } = await getCommentByIdQuery({ commentId });
+    const { rows: comment } = await getCommentByIdQuery({ id });
 
     if (!comment.length) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Comment NOT FOUND', 404);
     }
     if (comment[0].user_id !== req.user?.id) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Unauthorized', 401);
     }
 
-    const { rows: editedComment } = await editCommentQuery({ content, commentId });
+    const { rows: editedComment } = await editCommentQuery({ content, id });
     res.status(300).json({
       error: false,
       data: {
