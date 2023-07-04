@@ -14,6 +14,7 @@ import {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  CommentQuery,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,
@@ -28,6 +29,7 @@ import {
   DeletePostRequest,
   LikeRequest,
   getSingleCohortRequest,
+  AddCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -57,6 +59,8 @@ export {
   GetSingleCohortQueryArgs,
   getSingleCohortRequest,
   CohortIdQueryArgs,
+  AddCommentRequest,
+  CommentQuery,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,

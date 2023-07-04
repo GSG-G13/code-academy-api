@@ -19,13 +19,13 @@ import {
   getCountPostsQuery,
 } from './posts';
 import { addLikeQuery, unlikeLikeQuery, checkQuery } from './likes';
-
 import {
   createUserQuery,
   createUserRoleQuery,
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
+import addCommentQuery from './comments';
 
 export {
   getUserByEmailQuery,
@@ -50,6 +50,7 @@ export {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  addCommentQuery,
   getSingleMemberQuery,
   getCountCohortsQuery,
   getCountMyCohorts,

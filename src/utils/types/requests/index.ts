@@ -42,6 +42,14 @@ interface AddPostRequest extends RequestWithDecoded {
   };
 }
 
+interface AddCommentRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+    postId: number;
+    cohortId: number;
+  };
+}
+
 interface EditPostRequest extends RequestWithDecoded {
   body: {
     content: string;
@@ -63,9 +71,9 @@ interface getSingleCohortRequest extends RequestWithDecoded {
 }
 
 interface LikeRequest extends RequestWithDecoded {
-  params : {
-    id: string,
-  }
+  params: {
+    id: string;
+  };
 }
 
 export {
@@ -79,4 +87,5 @@ export {
   CohortParmRequest,
   LikeRequest,
   getSingleCohortRequest,
+  AddCommentRequest,
 };
