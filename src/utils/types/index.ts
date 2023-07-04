@@ -15,6 +15,9 @@ import {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   CommentQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -58,4 +61,7 @@ export {
   CohortIdQueryArgs,
   AddCommentRequest,
   CommentQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };
