@@ -25,6 +25,10 @@ import {
   getCommentsQuery,
   getCommentByIdQuery,
   editCommentQuery,
+  getSingleMemberQuery,
+  getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 } from './query';
 
 export {
@@ -54,4 +58,8 @@ export {
   getCommentsQuery,
   getCommentByIdQuery,
   editCommentQuery,
+  getSingleMemberQuery,
+  getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 };

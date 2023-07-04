@@ -18,6 +18,9 @@ import {
   CommentsPostQuery,
   CommentIdQuery,
   EditCommentQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -66,4 +69,7 @@ export {
   EditCommentRequest,
   CommentIdQuery,
   EditCommentQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };
