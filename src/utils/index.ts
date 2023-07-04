@@ -17,6 +17,7 @@ import {
   LikeRequest,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  MemberIdQueryArgs,
   AllCohortsQueryArgs,
 } from './types';
 import {
@@ -28,6 +29,7 @@ import {
   deletePostSchema,
   validateLikes,
   getSingleCohortSchema,
+  validateGetSingleMember,
 } from './validation';
 
 export {
@@ -60,5 +62,7 @@ export {
   LikeRequest,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  MemberIdQueryArgs,
+  validateGetSingleMember,
   AllCohortsQueryArgs,
 };

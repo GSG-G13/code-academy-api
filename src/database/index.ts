@@ -21,6 +21,7 @@ import {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  getSingleMemberQuery,
   getCountCohortsQuery,
 } from './query';
 
@@ -47,5 +48,6 @@ export {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  getSingleMemberQuery,
   getCountCohortsQuery,
 };
