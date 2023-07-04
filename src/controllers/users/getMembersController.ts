@@ -6,15 +6,14 @@ const getMembersController = async (req: RequestWithDecoded, res: Response, next
   try {
     const { page } = req.query;
 
-    const offset = (Number(page || 1) - 1) * 12;
+    const offset = (Number(page || 1) - 1) * 15;
     const { rows: members } = await getMembersQuery({ offset });
     const { rows: countOfMembers } = await getCountMembersQuery();
     const allMembersCount = countOfMembers[0].count;
-
     const pagination = {
       allMembersCount: Number(allMembersCount),
       currentPage: Number(page || 1),
-      pages: Math.ceil(allMembersCount.length / 15),
+      pages: Math.ceil(allMembersCount / 15),
     };
 
     res.status(200).json({
