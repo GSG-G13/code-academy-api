@@ -11,10 +11,10 @@ const getCommentsController = async (
     if (!req.user) throw new CustomError('Unauthorized', 401);
 
     const { postId } = req.body;
-    const isAdmin = req.user?.isAdmin;
-    const roles = req.user?.roles;
+    const { isAdmin, roles } = req.user;
+
     const { rows: posts } = await getPostByIdQuery({ id: +postId });
-    if (!posts.length) throw new CustomError('NOT FOUND', 400);
+    if (!posts.length) throw new CustomError('Post NOT FOUND', 400);
     if (
       !(
         !roles ||
@@ -24,7 +24,7 @@ const getCommentsController = async (
           roles.some((role) => role.cohort_id === posts[0].cohort_id))
       )
     ) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Unauthorized', 401);
     }
 
     const { rows: comments } = await getCommentsQuery({ postId: +postId });
