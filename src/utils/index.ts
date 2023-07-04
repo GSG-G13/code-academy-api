@@ -18,6 +18,7 @@ import {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -61,4 +62,5 @@ export {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };

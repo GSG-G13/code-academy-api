@@ -22,6 +22,8 @@ import {
   getMembersQuery,
   getCountMembersQuery,
   getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 } from './query';
 
 export {
@@ -48,4 +50,6 @@ export {
   getMembersQuery,
   getCountMembersQuery,
   getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 };
