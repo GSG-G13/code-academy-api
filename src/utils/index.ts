@@ -25,6 +25,9 @@ import {
   EditCommentQuery,
   DeleteCommentRequest,
   DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -38,6 +41,7 @@ import {
   AddCommentSchema,
   editCommentSchema,
   deleteCommentSchema,
+  validateGetSingleMember,
 } from './validation';
 
 export {
@@ -61,6 +65,7 @@ export {
   validateLikes,
   editCommentSchema,
   deleteCommentSchema,
+  validateGetSingleMember,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -81,4 +86,7 @@ export {
   EditCommentQuery,
   DeleteCommentRequest,
   DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };

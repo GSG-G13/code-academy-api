@@ -14,7 +14,9 @@ const editCommentController = async (
     const { content } = req.body;
 
     await editCommentSchema.validateAsync({ content, id }, { abortEarly: false });
+
     const { rows: comment } = await getCommentByIdQuery({ id });
+
     if (!comment.length) {
       throw new CustomError('Comment NOT FOUND', 404);
     }

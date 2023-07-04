@@ -64,7 +64,7 @@ interface EditCommentRequest extends RequestWithDecoded {
   };
   params: {
     id: string;
-  }
+  };
 }
 
 interface DeleteCommentRequest extends RequestWithDecoded {

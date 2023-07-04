@@ -36,7 +36,7 @@ const getCohortPostsQuery = ({ id, offset }: CohortPostsQueryArgs) => {
       ORDER BY
         posts.id DESC
       OFFSET $2
-      LIMIT 10;
+      LIMIT 15;
     `,
     values: [id, offset],
   };
