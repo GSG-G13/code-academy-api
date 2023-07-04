@@ -1,6 +1,11 @@
 import { getMembersQuery, getCountMembersQuery, getSingleMemberQuery } from './users';
 import { getUserByEmailQuery, getUserRoles } from './auth';
-import { getAllCohortsQuery, getSingleCohortQuery, getCohortByIdQuery } from './cohorts';
+import {
+  getAllCohortsQuery,
+  getSingleCohortQuery,
+  getCohortByIdQuery,
+  getCountCohortsQuery,
+} from './cohorts';
 import {
   getPublicPostsQuery,
   getCohortPostsQuery,
@@ -44,4 +49,5 @@ export {
   getMembersQuery,
   getCountMembersQuery,
   getSingleMemberQuery,
+  getCountCohortsQuery,
 };

@@ -27,7 +27,7 @@ CREATE TABLE users (
 );
 INSERT INTO users (full_name, username, email, password, avatar, is_active, career_status_id)
 VALUES
-  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$EXkKb.e1TQrSJkoGnbQ2nO5.V2uWuIOeLqwICylJEj5cG1BTXblBa', 'avatar2.jpg', true, 2);
+  ('Admin', 'admin', 'codeacademy.gsg@gmail.com', '$2b$10$EXkKb.e1TQrSJkoGnbQ2nO5.V2uWuIOeLqwICylJEj5cG1BTXblBa', 'avatar2.jpg', true, 3);
 
 CREATE TABLE roles (
   id SERIAL PRIMARY KEY,
