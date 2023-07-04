@@ -21,6 +21,7 @@ import {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  getCountCohortsQuery,
 } from './query';
 
 export {
@@ -46,4 +47,5 @@ export {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  getCountCohortsQuery,
 };
