@@ -11,19 +11,19 @@ const deleteCommentsController = async (
   try {
     if (!req.user) throw new CustomError('Unauthorized', 401);
 
-    const { commentId } = req.body;
-    await deleteCommentSchema.validateAsync({ commentId });
+    const { id } = req.params;
+    await deleteCommentSchema.validateAsync({ id });
 
-    const { rows: comment } = await getCommentByIdQuery({ commentId });
+    const { rows: comment } = await getCommentByIdQuery({ id });
 
     if (!comment.length) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Comment NOT FOUND', 404);
     }
     if (comment[0].user_id !== req.user?.id) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Unauthorized', 401);
     }
 
-    const { rows: deletedCommentId } = await deleteCommentQuery({ commentId });
+    const { rows: deletedCommentId } = await deleteCommentQuery({ id });
     res.status(200).json({
       error: false,
       data: {
