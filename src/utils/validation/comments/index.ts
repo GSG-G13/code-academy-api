@@ -1,3 +1,4 @@
 import AddCommentSchema from './AddCommentSchema';
+import editCommentSchema from './editCommentSchema';
 
-export default AddCommentSchema;
+export { AddCommentSchema, editCommentSchema };
