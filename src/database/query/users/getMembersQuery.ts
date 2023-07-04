@@ -22,7 +22,7 @@ const getMembersQuery = ({ offset }: PublicPostsQueryArgs) => {
       JOIN
         career_status ON users.career_status_id = career_status.id
       OFFSET $1
-      LIMIT 12;
+      LIMIT 15;
     `,
     values: [offset],
   };

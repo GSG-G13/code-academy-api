@@ -1,5 +1,5 @@
 import { Response, NextFunction } from 'express';
-import { getAllCohortsQuery } from '../../database';
+import { getAllCohortsQuery, getCountCohortsQuery } from '../../database';
 import { RequestWithDecoded } from '../../utils';
 
 const getAllCohortsController = async (
@@ -8,16 +8,26 @@ const getAllCohortsController = async (
   next: NextFunction,
 ) => {
   try {
-    const { rows } = await getAllCohortsQuery();
-    res.json({
+    const { page } = req.query;
+    const offset = (Number(page || 1) - 1) * 15;
+    const { rows: cohorts } = await getAllCohortsQuery({ offset });
+    const { rows: countCohorts } = await getCountCohortsQuery();
+    const allCohortsCount = countCohorts[0].count;
+    const pagination = {
+      allCohortsCount,
+      currentPage: Number(page || 1),
+      pages: Math.ceil(allCohortsCount / 15),
+    };
+    res.status(200).json({
       error: false,
       data: {
-        message: 'cohorts retrieved Successfully',
-        cohorts: rows,
+        message: 'Success cohorts',
+        cohorts,
+        pagination,
       },
     });
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 };
 
