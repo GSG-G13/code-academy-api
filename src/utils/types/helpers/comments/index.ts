@@ -3,4 +3,8 @@ interface CommentQuery {
   postId: number;
   userId: number;
 }
-export default CommentQuery;
+
+interface CommentsPostQuery {
+  postId: number;
+}
+export { CommentQuery, CommentsPostQuery };

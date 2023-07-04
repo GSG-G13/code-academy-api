@@ -1,3 +1,4 @@
 import addCommentQuery from './addCommentQuery';
+import getCommentsQuery from './getCommentsQuery';
 
-export default addCommentQuery;
+export { addCommentQuery, getCommentsQuery };

@@ -14,8 +14,8 @@ import {
   getSinglePostController,
   addPostController,
 } from './posts';
+import { addCommentController, getCommentsController } from './comments';
 import { getMembersController, getSingleMemberController } from './users';
-import commentController from './comments';
 import likeController from './likes';
 
 export {
@@ -35,6 +35,7 @@ export {
   getAllCohortsController,
   getMembersController,
   logoutController,
-  commentController,
+  addCommentController,
+  getCommentsController,
   getSingleMemberController,
 };

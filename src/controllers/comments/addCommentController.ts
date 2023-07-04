@@ -26,7 +26,7 @@ const addCommentController = async (req: AddCommentRequest, res: Response, next:
 
     const { rows: comment } = await addCommentQuery({ content, postId, userId });
 
-    res.status(200).json({ error: false, data: { message: 'comment added success', comment } });
+    res.status(201).json({ error: false, data: { message: 'comment added success', comment } });
   } catch (err) {
     next(err);
   }
