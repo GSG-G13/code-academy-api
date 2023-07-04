@@ -5,6 +5,8 @@ import {
   getSingleCohortQuery,
   getCohortByIdQuery,
   getCountCohortsQuery,
+  getMyCohortsQuery,
+  getCountMyCohorts,
 } from './cohorts';
 import {
   getPublicPostsQuery,
@@ -50,4 +52,6 @@ export {
   getCountMembersQuery,
   getSingleMemberQuery,
   getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 };

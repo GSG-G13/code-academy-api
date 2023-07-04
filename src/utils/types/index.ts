@@ -16,6 +16,7 @@ import {
   CohortIdQueryArgs,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -58,4 +59,5 @@ export {
   CohortIdQueryArgs,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };
