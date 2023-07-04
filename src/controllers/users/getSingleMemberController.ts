@@ -10,13 +10,14 @@ const getSingleMemberController = async (
   try {
     const { id } = req.params;
     await validateGetSingleMember.validateAsync({ id });
-    const { rows, rowCount } = await getSingleMemberQuery({ memberId: +id });
+    const { rows: memberInfo } = await getSingleMemberQuery({ memberId: +id });
 
-    if (!rowCount) throw new CustomError('Member not found', 404);
+    if (!memberInfo.length) throw new CustomError('Member not found', 404);
     res.status(200).json({
+      error: false,
       data: {
         message: 'Member returned successfully',
-        member: { ...rows[0] },
+        member: memberInfo[0],
       },
     });
   } catch (err) {
