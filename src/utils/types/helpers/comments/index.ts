@@ -9,16 +9,16 @@ interface CommentsPostQuery {
 }
 
 interface CommentIdQuery {
-  commentId: number;
+  id: string;
 }
 
 interface EditCommentQuery {
   content: string;
-  commentId: number;
+  id: string;
 }
 
 interface DeleteComment {
-  commentId: number;
+  id: string;
 }
 
 export { CommentQuery, CommentsPostQuery, CommentIdQuery, EditCommentQuery, DeleteComment };

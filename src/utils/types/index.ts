@@ -19,6 +19,9 @@ import {
   CommentIdQuery,
   EditCommentQuery,
   DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -70,4 +73,7 @@ export {
   EditCommentQuery,
   DeleteCommentRequest,
   DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };

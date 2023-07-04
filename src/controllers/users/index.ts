@@ -1,3 +1,4 @@
 import getMembersController from './getMembersController';
+import getSingleMemberController from './getSingleMemberController';
 
-export default getMembersController;
+export { getMembersController, getSingleMemberController };
