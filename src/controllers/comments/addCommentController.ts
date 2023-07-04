@@ -8,13 +8,10 @@ const addCommentController = async (req: AddCommentRequest, res: Response, next:
     const { content, postId } = req.body;
     await AddCommentSchema.validateAsync({ content, postId });
 
-    const isAdmin = req.user?.isAdmin;
-    const roles = req.user?.roles;
-    const userId = req.user?.id;
-
+    const { isAdmin, roles, id: userId } = req.user;
     const { rows: posts } = await getPostByIdQuery({ id: postId });
 
-    if (!posts.length) throw new CustomError('NOT FOUND', 404);
+    if (!posts.length) throw new CustomError('Post NOT FOUND', 404);
     if (
       !(
         !roles ||
@@ -24,7 +21,7 @@ const addCommentController = async (req: AddCommentRequest, res: Response, next:
           roles.some((role) => role.cohort_id === posts[0].cohort_id))
       )
     ) {
-      throw new CustomError('NOT FOUND', 404);
+      throw new CustomError('Unauthorized', 401);
     }
 
     const { rows: comment } = await addCommentQuery({ content, postId, userId });
