@@ -23,6 +23,8 @@ import {
   EditCommentRequest,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,
@@ -38,6 +40,7 @@ import {
   getSingleCohortSchema,
   AddCommentSchema,
   editCommentSchema,
+  deleteCommentSchema,
   validateGetSingleMember,
 } from './validation';
 
@@ -61,6 +64,7 @@ export {
   AddCommentSchema,
   validateLikes,
   editCommentSchema,
+  deleteCommentSchema,
   validateGetSingleMember,
   CustomError,
   Decoded,
@@ -80,6 +84,8 @@ export {
   CommentsPostQuery,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,

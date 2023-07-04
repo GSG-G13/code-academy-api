@@ -18,6 +18,7 @@ import {
   CommentsPostQuery,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteComment,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,
@@ -34,6 +35,7 @@ import {
   getSingleCohortRequest,
   AddCommentRequest,
   EditCommentRequest,
+  DeleteCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -69,6 +71,8 @@ export {
   EditCommentRequest,
   CommentIdQuery,
   EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,

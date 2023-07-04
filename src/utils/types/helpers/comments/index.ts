@@ -17,4 +17,8 @@ interface EditCommentQuery {
   id: string;
 }
 
-export { CommentQuery, CommentsPostQuery, CommentIdQuery, EditCommentQuery };
+interface DeleteComment {
+  id: string;
+}
+
+export { CommentQuery, CommentsPostQuery, CommentIdQuery, EditCommentQuery, DeleteComment };

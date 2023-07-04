@@ -12,6 +12,7 @@ const editCommentController = async (
     if (!req.user) throw new CustomError('Unauthorized', 401);
     const { id } = req.params;
     const { content } = req.body;
+
     await editCommentSchema.validateAsync({ content, id }, { abortEarly: false });
 
     const { rows: comment } = await getCommentByIdQuery({ id });

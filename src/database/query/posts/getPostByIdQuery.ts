@@ -4,7 +4,7 @@ import connection from '../../config/connection';
 const getPostByIdQuery = ({ id }: PostIdQueryArgs) => {
   const sql = {
     text: `SELECT
-    users.id AS "userId",
+    users.id AS "user_id",
     users.username AS "username",
     users.avatar AS "avatar",
     posts.id AS "id",
