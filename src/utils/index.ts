@@ -20,6 +20,9 @@ import {
   AddCommentRequest,
   CommentQuery,
   CommentsPostQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -31,6 +34,7 @@ import {
   validateLikes,
   getSingleCohortSchema,
   AddCommentSchema,
+  validateGetSingleMember,
 } from './validation';
 
 export {
@@ -52,6 +56,7 @@ export {
   getSingleCohortSchema,
   AddCommentSchema,
   validateLikes,
+  validateGetSingleMember,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -67,4 +72,7 @@ export {
   AddCommentRequest,
   CommentQuery,
   CommentsPostQuery,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };
