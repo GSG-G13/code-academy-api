@@ -4,6 +4,7 @@ import postsRouter from './posts';
 import likesRouter from './likes';
 import userCohortsRouter from './cohorts';
 import membersRouter from './members';
+import profileRouter from './profile';
 
 const router: Router = express.Router();
 
@@ -14,5 +15,6 @@ router.use('/posts', postsRouter);
 router.use('/likes', likesRouter);
 router.use('/cohorts', userCohortsRouter);
 router.use('/members', membersRouter);
+router.use('/profile', profileRouter);
 
 export default router;

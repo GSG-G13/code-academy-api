@@ -6,6 +6,8 @@ import editPostQuery from './editPostQuery';
 import getPostByIdQuery from './getPostByIdQuery';
 import deletePostQuery from './deletePostQuery';
 import getCountPostsQuery from './getCountPostsQuery';
+import getAllPostsByUserId from './getAllPostsByUserId';
+import getCountPostsByUserIdQuery from './getCountPostsByUserIdQuery';
 
 export {
   getPublicPostsQuery,
@@ -16,4 +18,6 @@ export {
   deletePostQuery,
   addPostQuery,
   getCountPostsQuery,
+  getAllPostsByUserId,
+  getCountPostsByUserIdQuery,
 };

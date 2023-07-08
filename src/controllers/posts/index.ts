@@ -4,6 +4,7 @@ import addPostController from './addPostController';
 import editPostController from './editPostController';
 import deletePostController from './deletePostController';
 import getSinglePostController from './getSinglePostController';
+import getAllPostsByUserIdController from './getAllPostsByUserIdController';
 
 export {
   getPublicPostsController,
@@ -12,4 +13,5 @@ export {
   deletePostController,
   getSinglePostController,
   addPostController,
+  getAllPostsByUserIdController,
 };

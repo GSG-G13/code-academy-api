@@ -13,6 +13,7 @@ import {
   deletePostController,
   getSinglePostController,
   addPostController,
+  getAllPostsByUserIdController,
 } from './posts';
 import getMembersController from './users';
 import likeController from './likes';
@@ -34,4 +35,5 @@ export {
   getAllCohortsController,
   getMembersController,
   logoutController,
+  getAllPostsByUserIdController,
 };

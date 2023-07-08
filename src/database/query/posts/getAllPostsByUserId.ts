@@ -1,7 +1,7 @@
-import { PublicPostsQueryArgs } from '../../../utils/types';
+import { PostsByUserId } from '../../../utils/types';
 import connection from '../../config/connection';
 
-const getPublicPostsQuery = ({ offset }: PublicPostsQueryArgs) => {
+const getAllPostsByUserId = ({ offset, userId }: PostsByUserId) => {
   const sql = {
     text: `SELECT
     users.id AS "userId",
@@ -27,18 +27,19 @@ const getPublicPostsQuery = ({ offset }: PublicPostsQueryArgs) => {
     users AS comment_users ON comments.user_id = comment_users.id
   LEFT JOIN
     saved_posts ON saved_posts.post_id = posts.id
+  WHERE posts.user_id = $1
   GROUP BY
     users.id,
     posts.id
   ORDER BY
     posts.created_at DESC
-  OFFSET $1
+  OFFSET $2
   LIMIT 10;
   
   `,
-    values: [offset],
+    values: [userId, offset],
   };
   return connection.query(sql);
 };
 
-export default getPublicPostsQuery;
+export default getAllPostsByUserId;

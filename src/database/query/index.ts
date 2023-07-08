@@ -10,6 +10,8 @@ import {
   deletePostQuery,
   addPostQuery,
   getCountPostsQuery,
+  getAllPostsByUserId,
+  getCountPostsByUserIdQuery,
 } from './posts';
 import { addLikeQuery, unlikeLikeQuery, checkQuery } from './likes';
 
@@ -43,4 +45,6 @@ export {
   getCohortByIdQuery,
   getMembersQuery,
   getCountMembersQuery,
+  getAllPostsByUserId,
+  getCountPostsByUserIdQuery,
 };
