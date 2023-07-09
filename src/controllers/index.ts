@@ -22,6 +22,7 @@ import {
 } from './comments';
 import { getMembersController, getSingleMemberController } from './users';
 import likeController from './likes';
+import getUploadUrlController from './s3';
 
 export {
   signInController,
@@ -45,4 +46,5 @@ export {
   editCommentController,
   deleteCommentsController,
   getSingleMemberController,
+  getUploadUrlController,
 };

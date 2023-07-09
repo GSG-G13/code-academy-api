@@ -1,5 +1,5 @@
 import { signToken, verifyToken } from './jwt';
-import { hashPassword, comparePassword, CustomError } from './helpers';
+import { hashPassword, comparePassword, CustomError, createS3Client } from './helpers';
 import {
   User,
   RoleType,
@@ -89,4 +89,5 @@ export {
   MemberIdQueryArgs,
   AllCohortsQueryArgs,
   getMyCohortsQueryArgs,
+  createS3Client,
 };
