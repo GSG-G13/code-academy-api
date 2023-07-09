@@ -23,6 +23,15 @@ import {
   getCountMembersQuery,
   getAllPostsByUserId,
   getCountPostsByUserIdQuery,
+  addCommentQuery,
+  getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
+  deleteCommentQuery,
+  getSingleMemberQuery,
+  getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 } from './query';
 
 export {
@@ -50,4 +59,13 @@ export {
   getCountMembersQuery,
   getAllPostsByUserId,
   getCountPostsByUserIdQuery,
+  addCommentQuery,
+  getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
+  deleteCommentQuery,
+  getSingleMemberQuery,
+  getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 };

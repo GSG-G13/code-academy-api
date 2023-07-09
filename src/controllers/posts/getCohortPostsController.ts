@@ -10,7 +10,7 @@ const getCohortPostsController = async (
 ) => {
   try {
     const { page } = req.query;
-    const offset = (Number(page || 1) - 1) * 10;
+    const offset = (Number(page || 1) - 1) * 15;
     const { cohortName } = req.params;
     const roles = req.user?.roles;
 
@@ -32,7 +32,7 @@ const getCohortPostsController = async (
     const pagination = {
       allPostsCount,
       currentPage: Number(page || 1),
-      pages: Math.ceil(allPostsCount / 10),
+      pages: Math.ceil(allPostsCount / 15),
     };
 
     res.status(201).json({

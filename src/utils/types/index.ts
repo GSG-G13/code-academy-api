@@ -15,6 +15,14 @@ import {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   PostsByUserId,
+  CommentQuery,
+  CommentsPostQuery,
+  CommentIdQuery,
+  EditCommentQuery,
+  DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './helpers';
 import {
   CohortParmRequest,
@@ -26,6 +34,9 @@ import {
   DeletePostRequest,
   LikeRequest,
   getSingleCohortRequest,
+  AddCommentRequest,
+  EditCommentRequest,
+  DeleteCommentRequest,
 } from './requests';
 import StatusCode from './enums';
 
@@ -56,4 +67,15 @@ export {
   getSingleCohortRequest,
   CohortIdQueryArgs,
   PostsByUserId,
+  AddCommentRequest,
+  CommentQuery,
+  CommentsPostQuery,
+  EditCommentRequest,
+  CommentIdQuery,
+  EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 };

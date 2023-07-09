@@ -23,11 +23,13 @@ const signInController = async (req: SignInRequest, res: Response, next: NextFun
     if (!checkPassword) {
       throw new CustomError('Invalid email or password', 401);
     }
+    const isAdmin = rows[0].role === 'Admin';
     const token = await signToken(
       {
         id: rows[0].id,
         username: rows[0].username,
         email: rows[0].email,
+        isAdmin,
       },
       {
         expiresIn: '1d',
@@ -45,6 +47,7 @@ const signInController = async (req: SignInRequest, res: Response, next: NextFun
             id: rows[0].id,
             email: rows[0].email,
             username: rows[0].username,
+            isAdmin,
           },
         },
       });

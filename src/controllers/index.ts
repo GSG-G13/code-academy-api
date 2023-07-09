@@ -15,8 +15,15 @@ import {
   addPostController,
   getAllPostsByUserIdController,
 } from './posts';
-import getMembersController from './users';
+import {
+  addCommentController,
+  getCommentsController,
+  editCommentController,
+  deleteCommentsController,
+} from './comments';
+import { getMembersController, getSingleMemberController } from './users';
 import likeController from './likes';
+import getUploadUrlController from './s3';
 
 export {
   signInController,
@@ -36,4 +43,10 @@ export {
   getMembersController,
   logoutController,
   getAllPostsByUserIdController,
+  addCommentController,
+  getCommentsController,
+  editCommentController,
+  deleteCommentsController,
+  getSingleMemberController,
+  getUploadUrlController,
 };

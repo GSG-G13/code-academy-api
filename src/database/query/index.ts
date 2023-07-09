@@ -1,6 +1,13 @@
-import { getMembersQuery, getCountMembersQuery } from './users';
+import { getMembersQuery, getCountMembersQuery, getSingleMemberQuery } from './users';
 import { getUserByEmailQuery, getUserRoles } from './auth';
-import { getAllCohortsQuery, getSingleCohortQuery, getCohortByIdQuery } from './cohorts';
+import {
+  getAllCohortsQuery,
+  getSingleCohortQuery,
+  getCohortByIdQuery,
+  getCountCohortsQuery,
+  getMyCohortsQuery,
+  getCountMyCohorts,
+} from './cohorts';
 import {
   getPublicPostsQuery,
   getCohortPostsQuery,
@@ -14,13 +21,19 @@ import {
   getCountPostsByUserIdQuery,
 } from './posts';
 import { addLikeQuery, unlikeLikeQuery, checkQuery } from './likes';
-
 import {
   createUserQuery,
   createUserRoleQuery,
   AddCohortQuery,
   getCohortByNameQuery,
 } from './admin';
+import {
+  addCommentQuery,
+  getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
+  deleteCommentQuery,
+} from './comments';
 
 export {
   getUserByEmailQuery,
@@ -47,4 +60,13 @@ export {
   getCountMembersQuery,
   getAllPostsByUserId,
   getCountPostsByUserIdQuery,
+  addCommentQuery,
+  getCommentsQuery,
+  getCommentByIdQuery,
+  editCommentQuery,
+  deleteCommentQuery,
+  getSingleMemberQuery,
+  getCountCohortsQuery,
+  getCountMyCohorts,
+  getMyCohortsQuery,
 };

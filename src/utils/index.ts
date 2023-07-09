@@ -1,5 +1,5 @@
 import { signToken, verifyToken } from './jwt';
-import { hashPassword, comparePassword, CustomError } from './helpers';
+import { hashPassword, comparePassword, CustomError, createS3Client } from './helpers';
 import {
   User,
   RoleType,
@@ -18,6 +18,17 @@ import {
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   PostsByUserId,
+  AddCommentRequest,
+  CommentQuery,
+  CommentsPostQuery,
+  EditCommentRequest,
+  CommentIdQuery,
+  EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
 } from './types';
 import {
   loginSchema,
@@ -28,6 +39,10 @@ import {
   deletePostSchema,
   validateLikes,
   getSingleCohortSchema,
+  AddCommentSchema,
+  editCommentSchema,
+  deleteCommentSchema,
+  validateGetSingleMember,
 } from './validation';
 
 export {
@@ -47,6 +62,11 @@ export {
   deletePostSchema,
   validateAddPostSchema,
   getSingleCohortSchema,
+  AddCommentSchema,
+  validateLikes,
+  editCommentSchema,
+  deleteCommentSchema,
+  validateGetSingleMember,
   CustomError,
   Decoded,
   RequestWithDecoded,
@@ -55,10 +75,21 @@ export {
   PostIdQueryArgs,
   AddPostQuery,
   AddPostRequest,
-  validateLikes,
   LikeQuery,
   LikeRequest,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
   PostsByUserId,
+  AddCommentRequest,
+  EditCommentRequest,
+  CommentQuery,
+  CommentsPostQuery,
+  CommentIdQuery,
+  EditCommentQuery,
+  DeleteCommentRequest,
+  DeleteComment,
+  MemberIdQueryArgs,
+  AllCohortsQueryArgs,
+  getMyCohortsQueryArgs,
+  createS3Client,
 };

@@ -42,6 +42,13 @@ interface AddPostRequest extends RequestWithDecoded {
   };
 }
 
+interface AddCommentRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+    postId: number;
+  };
+}
+
 interface EditPostRequest extends RequestWithDecoded {
   body: {
     content: string;
@@ -51,6 +58,20 @@ interface EditPostRequest extends RequestWithDecoded {
   };
 }
 
+interface EditCommentRequest extends RequestWithDecoded {
+  body: {
+    content: string;
+  };
+  params: {
+    id: string;
+  };
+}
+
+interface DeleteCommentRequest extends RequestWithDecoded {
+  params: {
+    id: string;
+  };
+}
 interface DeletePostRequest extends RequestWithDecoded {
   params: {
     id: string;
@@ -63,9 +84,9 @@ interface getSingleCohortRequest extends RequestWithDecoded {
 }
 
 interface LikeRequest extends RequestWithDecoded {
-  params : {
-    id: string,
-  }
+  params: {
+    id: string;
+  };
 }
 
 export {
@@ -79,4 +100,7 @@ export {
   CohortParmRequest,
   LikeRequest,
   getSingleCohortRequest,
+  AddCommentRequest,
+  EditCommentRequest,
+  DeleteCommentRequest,
 };

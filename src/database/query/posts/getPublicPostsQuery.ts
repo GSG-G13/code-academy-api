@@ -33,7 +33,7 @@ const getPublicPostsQuery = ({ offset }: PublicPostsQueryArgs) => {
   ORDER BY
     posts.created_at DESC
   OFFSET $1
-  LIMIT 10;
+  LIMIT 15;
   
   `,
     values: [offset],
