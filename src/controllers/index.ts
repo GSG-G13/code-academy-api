@@ -13,6 +13,7 @@ import {
   deletePostController,
   getSinglePostController,
   addPostController,
+  getAllPostsByUserIdController,
 } from './posts';
 import {
   addCommentController,
@@ -41,6 +42,7 @@ export {
   getAllCohortsController,
   getMembersController,
   logoutController,
+  getAllPostsByUserIdController,
   addCommentController,
   getCommentsController,
   editCommentController,

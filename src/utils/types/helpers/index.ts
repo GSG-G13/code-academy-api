@@ -8,6 +8,8 @@ import CohortNameQueryArgs from './CohortNameQueryArgs';
 import PostIdQueryArgs from './PostIdQueryArgs';
 import GetSingleCohortQueryArgs from './GetSingleCohortQuery';
 import CohortIdQueryArgs from './CohortIdQueryArg';
+import PostsByUserId from './PostsByUserId';
+
 import MemberIdQueryArgs from './GetSingleMemberQuery';
 import AllCohortsQueryArgs from './AllCohortsQueryArgs';
 import getMyCohortsQueryArgs from './getMyCohortsQueryArgs';
@@ -38,6 +40,7 @@ export {
   LikeQuery,
   GetSingleCohortQueryArgs,
   CohortIdQueryArgs,
+  PostsByUserId,
   CommentQuery,
   CommentsPostQuery,
   CommentIdQuery,
