@@ -1,4 +1,5 @@
 import getMembersController from './getMembersController';
 import getSingleMemberController from './getSingleMemberController';
+import getPersonalInfo from './getPersonalInfoController';
 
-export { getMembersController, getSingleMemberController };
+export { getMembersController, getSingleMemberController, getPersonalInfo };
