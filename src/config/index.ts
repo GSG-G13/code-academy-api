@@ -13,6 +13,7 @@ const {
   BUCKET_REGION,
   AWS_ACCESS_KEY_ID,
   AWS_SECRET_ACCESS_KEY,
+  DATABASE_URL,
 } = process.env;
 
 export {
@@ -26,4 +27,5 @@ export {
   BUCKET_REGION,
   AWS_ACCESS_KEY_ID,
   AWS_SECRET_ACCESS_KEY,
+  DATABASE_URL,
 };
