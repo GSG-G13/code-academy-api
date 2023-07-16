@@ -1,10 +1,12 @@
 import { Pool } from 'pg';
 
-import { DEV_DB_URL, NODE_ENV } from '../../config';
+import { DEV_DB_URL, DATABASE_URL, NODE_ENV } from '../../config';
 
 const options = {
-  connectionString: DEV_DB_URL,
-  ssl: NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  connectionString: NODE_ENV === 'production' ? DATABASE_URL : DEV_DB_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 };
 
 const connection = new Pool(options);
