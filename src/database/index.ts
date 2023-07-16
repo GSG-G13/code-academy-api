@@ -32,6 +32,7 @@ import {
   getCountCohortsQuery,
   getCountMyCohorts,
   getMyCohortsQuery,
+  getUserInfoQuery,
 } from './query';
 
 export {
@@ -68,4 +69,5 @@ export {
   getCountCohortsQuery,
   getCountMyCohorts,
   getMyCohortsQuery,
+  getUserInfoQuery,
 };
