@@ -2,7 +2,7 @@ import { Response, NextFunction } from 'express';
 import { CustomError, RequestWithDecoded } from '../../utils';
 import { getCountMyCohorts, getMyCohortsQuery } from '../../database';
 
-const getMyCohortsControler = async (
+const getMyCohortsController = async (
   req: RequestWithDecoded,
   res: Response,
   next: NextFunction,
@@ -31,4 +31,4 @@ const getMyCohortsControler = async (
     next(err);
   }
 };
-export default getMyCohortsControler;
+export default getMyCohortsController;

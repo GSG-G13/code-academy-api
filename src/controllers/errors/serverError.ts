@@ -5,6 +5,8 @@ import { CustomError } from '../../utils/helpers';
 
 // eslint-disable-next-line no-unused-vars
 const serverError = (err: CustomError, req: Request, res: Response, _next: NextFunction) => {
+  console.log(err);
+
   if (err instanceof ValidationError) {
     return res.status(422).json({
       error: true,
