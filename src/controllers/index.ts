@@ -21,7 +21,11 @@ import {
   editCommentController,
   deleteCommentsController,
 } from './comments';
-import { getMembersController, getSingleMemberController } from './users';
+import {
+  getMembersController,
+  getSingleMemberController,
+  getPersonalInfo,
+} from './users';
 import likeController from './likes';
 import getUploadUrlController from './s3';
 
@@ -49,4 +53,5 @@ export {
   deleteCommentsController,
   getSingleMemberController,
   getUploadUrlController,
+  getPersonalInfo,
 };
