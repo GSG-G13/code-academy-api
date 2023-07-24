@@ -14,7 +14,13 @@ const getAllPostsByUserId = ({ offset, userId }: PostsByUserId) => {
     posts.updated_at AS "updatedAt",
     COUNT(likes.id) AS "likesCount",
     COUNT(comments.id) AS "commentsCount",
-    COUNT(saved_posts.id) AS "savesCount"
+    COUNT(saved_posts.id) AS "savesCount",
+    EXISTS (
+      SELECT 1
+      FROM likes
+      WHERE likes.post_id = posts.id
+        AND likes.user_id = $1
+    ) AS "isLiked"
   FROM
     posts
   JOIN
